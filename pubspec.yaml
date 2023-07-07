@@ -1,0 +1,91 @@
+name: seyamy
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.2 <4.0.0'
+
+# Flutter SDK and essential dependencies
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  
+  # UI and styling dependencies
+  flutter_svg: ^2.0.5
+  flutter_screenutil: ^5.7.0
+  animate_do: ^3.0.2
+  smooth_page_indicator: ^1.1.0
+  device_preview: ^1.1.0
+  confetti: ^0.7.0
+  
+  # Localization and internationalization
+  easy_localization: ^3.0.2
+  
+  # NOTIFICATION
+  flutter_local_notifications: ^14.1.1
+  
+  # Configuration and utilities
+  flutter_native_splash: ^2.2.19
+  vibration: ^1.7.5
+  rive: ^0.11.1
+  shared_preferences: ^2.0.8
+  
+  # Network
+  dio: ^5.1.1
+  pretty_dio_logger: ^1.3.1
+  flutter_offline: ^2.1.0
+  
+  # State management and dependency injection
+  flutter_bloc: ^8.1.2
+  dartz: ^0.10.1
+  get_it: ^7.6.0
+  equatable: ^2.0.5
+  
+  # Routing and navigation
+  go_router: ^8.0.1
+  
+
+# Dev dependencies
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter_native_splash:
+  background_image: "assets/images/splash light.png"
+  background_image_dark: "assets/images/splash dark.png"
+
+flutter:
+  uses-material-design: true
+
+  # Assets used in the project
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/animation/
+    - assets/
+    - lang/
+
+  # Fonts used in the project
+  fonts:
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Cairo-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Cairo-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Cairo-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Cairo-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Cairo-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Cairo-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Cairo-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Cairo-VariableFont_slnt,wght.ttf
+          weight: 100
