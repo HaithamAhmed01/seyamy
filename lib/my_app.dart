@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return EasyLocalization(
-      path: 'lang',
+      path: 'assets/lang',
       saveLocale: true,
       startLocale: AppLocalizationsSetup.supportedLocales.first,
       fallbackLocale: AppLocalizationsSetup.supportedLocales.first,

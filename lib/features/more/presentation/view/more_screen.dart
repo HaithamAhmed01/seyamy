@@ -18,6 +18,7 @@ class MoreScreen extends StatefulWidget {
 
 class _MoreScreenState extends State<MoreScreen> {
   final AppPreferences _appPreferences = sl<AppPreferences>();
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ThemeCubit, AppTheme>(

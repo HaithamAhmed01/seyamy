@@ -66,8 +66,8 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/animation/
+    - assets/lang/
     - assets/
-    - lang/
 
   # Fonts used in the project
   fonts:
