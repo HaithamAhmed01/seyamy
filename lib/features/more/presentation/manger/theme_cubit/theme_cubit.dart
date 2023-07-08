@@ -8,6 +8,7 @@ import '../../../../../config/theme/light_theme.dart';
 
 class ThemeCubit extends Cubit<AppTheme> {
   final SharedPreferences preferences;
+
   ThemeCubit({required this.preferences}) : super(AppTheme.light) {
     _initializeTheme();
   }
@@ -27,11 +28,15 @@ class ThemeCubit extends Cubit<AppTheme> {
     emit(theme);
   }
 
+  bool them = false;
+
   ThemeData _getCustomDarkTheme() {
+    them = false;
     return dark;
   }
 
   ThemeData _getCustomLightTheme() {
+    them = true;
     return light;
   }
 

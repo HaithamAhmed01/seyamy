@@ -34,7 +34,7 @@ class BottomNavBarWidget extends StatelessWidget {
           items: [
             BottomNavigationBarItem(
               icon: bottomNavCurrentIndex == 0
-                  ? themeCubit.state == AppTheme.light
+                  ? themeCubit.them
                       ? SvgPicture.asset(
                           ImageAssets.iconHome,
                         )
@@ -50,7 +50,7 @@ class BottomNavBarWidget extends StatelessWidget {
             ),
             BottomNavigationBarItem(
               icon: bottomNavCurrentIndex == 1
-                  ? themeCubit.state == AppTheme.light
+                  ? themeCubit.them
                       ? SvgPicture.asset(
                           ImageAssets.iconFadl,
                         )
@@ -66,7 +66,7 @@ class BottomNavBarWidget extends StatelessWidget {
             ),
             BottomNavigationBarItem(
               icon: bottomNavCurrentIndex == 2
-                  ? themeCubit.state == AppTheme.light
+                  ? themeCubit.them
                       ? SvgPicture.asset(
                           ImageAssets.iconMore,
                         )

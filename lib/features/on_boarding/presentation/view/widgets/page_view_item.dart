@@ -22,7 +22,7 @@ class PageViewItem extends StatelessWidget {
       child: Column(
         children: [
           AspectRatio(
-            aspectRatio: 1 / 1,
+            aspectRatio: 1 / 1.01,
             child: Image.asset(
               onBoarding[index].image,
               fit: BoxFit.fill,

@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
     final themeCubit = BlocProvider.of<ThemeCubit>(context);
     return Scaffold(
       body: Center(
-        child: themeCubit.state == AppTheme.light
+        child: themeCubit.them
             ? const RiveAnimation.asset(
                 AnimationAssets.splashLight,
               )

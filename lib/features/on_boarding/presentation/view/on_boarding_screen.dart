@@ -17,11 +17,9 @@ class OnBoardingScreen extends StatelessWidget {
         systemNavigationBarIconBrightness: Brightness.dark,
       ),
     );
-    return const SafeArea(
-      child: Scaffold(
-        backgroundColor: AppColors.backgroundColor,
-        body: OnBoardingBody(),
-      ),
+    return const Scaffold(
+      backgroundColor: AppColors.backgroundColor,
+      body: OnBoardingBody(),
     );
   }
 }
