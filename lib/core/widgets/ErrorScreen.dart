@@ -12,7 +12,9 @@ class ErrorScreen extends StatelessWidget {
         body: Stack(
           children: [
             Image.asset('assets/images/7_Error.png',
-                fit: BoxFit.cover, height: context.height),
+                fit: BoxFit.cover, height: context.height,
+            width: context.width,
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
