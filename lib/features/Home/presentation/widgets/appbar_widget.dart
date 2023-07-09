@@ -9,13 +9,11 @@ AppBar buildAppBar(String text, BuildContext context) {
       text,
       style: context.subtitle1(),
     ),
-    actions: [
-      Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10),
-        child: SvgPicture.asset(
-          ImageAssets.iconSmallLogo,
-        ),
+    leading: Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: SvgPicture.asset(
+        ImageAssets.iconSmallLogo,
       ),
-    ],
+    ),
   );
 }
