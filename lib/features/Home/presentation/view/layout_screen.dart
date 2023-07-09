@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:seyamy/features/Home/presentation/manger/layout_cubit/cubit.dart';
 import 'package:seyamy/features/Home/presentation/manger/layout_cubit/state.dart';
-import 'package:seyamy/features/Home/presentation/view/widgets/appbar_widget.dart';
-import 'package:seyamy/features/Home/presentation/view/widgets/bottom_navbar_widget.dart';
+import 'package:seyamy/features/Home/presentation/widgets/appbar_widget.dart';
+import 'package:seyamy/features/Home/presentation/widgets/bottom_navbar_widget.dart';
 
 class LayoutScreen extends StatelessWidget {
   const LayoutScreen({super.key});

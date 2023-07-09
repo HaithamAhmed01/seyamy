@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:seyamy/core/utils/app_colors.dart';
-import 'package:seyamy/features/on_boarding/presentation/view/widgets/on_boarding_body.dart';
+import 'package:seyamy/features/on_boarding/presentation/widgets/on_boarding_body.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});

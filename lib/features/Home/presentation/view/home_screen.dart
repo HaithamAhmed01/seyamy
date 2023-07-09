@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:seyamy/core/utils/app_colors.dart';
 import 'package:seyamy/core/utils/helper.dart';
 import 'package:seyamy/core/widgets/custom_button.dart';
-import 'package:seyamy/features/Home/presentation/view/widgets/circle_widget.dart';
+import 'package:seyamy/features/Home/presentation/widgets/circle_widget.dart';
 import 'package:vibration/vibration.dart';
 
 class HomeScreen extends StatelessWidget {
