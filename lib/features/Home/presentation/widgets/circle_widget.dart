@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:seyamy/core/utils/app_colors.dart';
 import 'package:seyamy/core/utils/app_fonts.dart';
 import 'package:seyamy/core/utils/helper.dart';
 
+import '../../../more/presentation/manger/theme_cubit/theme_cubit.dart';
 import 'cut_circle_widget.dart';
 
 class CircleWidget extends StatelessWidget {
@@ -13,6 +15,7 @@ class CircleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeCubit = BlocProvider.of<ThemeCubit>(context);
     return GestureDetector(
       onTap: () {},
       child: SizedBox(
@@ -22,53 +25,80 @@ class CircleWidget extends StatelessWidget {
           children: [
             const CutCircle(),
             Container(
-              width: context.width / 1.6,
-              height: context.height / 3.5,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.elliptical(372.0, 370.0)),
-                color: Color(0xFFF6F7FA),
-                boxShadow: [
-                  BoxShadow(
-                    color: Color.fromRGBO(0, 0, 0, 0.11),
-                    offset: Offset(2.01, 2.01),
-                    blurRadius: 4.02,
-                  ),
-                  BoxShadow(
-                    color: Color.fromRGBO(255, 255, 255, 1),
-                    offset: Offset(-6.03, -6.03),
-                    blurRadius: 20.09,
-                  ),
-                  BoxShadow(
-                    color: Color.fromRGBO(114, 142, 171, 0.1),
-                    offset: Offset(4.02, 4.02),
-                    blurRadius: 40.18,
-                  ),
-                ],
+              width: context.width / 1.5,
+              height: context.width / 1.5,
+              decoration: BoxDecoration(
+                borderRadius:
+                    const BorderRadius.all(Radius.elliptical(372.0, 370.0)),
+                color: themeCubit.them
+                    ? const Color(0xFFF6F7FA)
+                    : const Color(0xFF203040),
+                boxShadow: themeCubit.them
+                    ? [
+                        const BoxShadow(
+                          color: Color(0x1C000000),
+                          blurRadius: 40.18,
+                          offset: Offset(4.02, 4.02),
+                          spreadRadius: 0,
+                        ),
+                        const BoxShadow(
+                          color: Color(0xFFFFFFFF),
+                          blurRadius: 20.09,
+                          offset: Offset(-6.03, -6.03),
+                          spreadRadius: 0,
+                        ),
+                        const BoxShadow(
+                          color: Color(0x19718EAB),
+                          blurRadius: 4.02,
+                          offset: Offset(2.01, 2.01),
+                          spreadRadius: 0,
+                        )
+                      ]
+                    : [],
               ),
             ),
             Container(
-              width: context.width / 1.8,
-              height: context.height / 4,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.elliptical(372.0, 370.0)),
-                color: Color(0xFFFFFFFF),
-                boxShadow: [
-                  BoxShadow(
-                    color: Color.fromRGBO(164, 174, 183, 0.25),
-                    offset: Offset(0, 4.01818),
-                    blurRadius: 18.0818,
+              width: context.width / 1.7,
+              height: context.width / 1.7,
+              decoration: BoxDecoration(
+                borderRadius:
+                    const BorderRadius.all(Radius.elliptical(372.0, 370.0)),
+                color: themeCubit.them
+                    ? const Color(0xFFFFFFFF)
+                    : const Color(0xFF203040),
+                boxShadow: themeCubit.them
+                    ? [
+                        const BoxShadow(
+                          color: Color(0xFFFFFFFF),
+                          blurRadius: 28.13,
+                          offset: Offset(-4.02, -4.02),
+                          spreadRadius: 0,
+                        ),
+                        const BoxShadow(
+                          color: Color(0x26A4AEB7),
+                          blurRadius: 32.15,
+                          offset: Offset(12.05, 12.05),
+                          spreadRadius: 0,
+                        ),
+                        const BoxShadow(
+                          color: Color(0x3FA4AEB7),
+                          blurRadius: 18.08,
+                          offset: Offset(0, 4.02),
+                          spreadRadius: 0,
+                        )
+                      ]
+                    : [
+                  const BoxShadow(
+                    color: Colors.black,
                   ),
-                  BoxShadow(
-                    color: Color.fromRGBO(164, 174, 183, 0.15),
-                    offset: Offset(12.0545, 12.0545),
-                    blurRadius: 32.1454,
-                  ),
-                  BoxShadow(
-                    color: Colors.white,
-                    offset: Offset(-4.01818, -4.01818),
-                    blurRadius: 28.1272,
+                  const BoxShadow(
+                    color: Colors.black,
+                    spreadRadius: -12.0,
+                    blurRadius: 30.0,
+
                   ),
                 ],
+
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -84,8 +114,9 @@ class CircleWidget extends StatelessWidget {
                     '30',
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      color: AppColors.primaryColor,
-                      fontFamily: AppFontConstants.fontFamily,
+                      color: themeCubit.them
+                          ? AppColors.primaryColor
+                          : AppColors.subDarkColor,
                       fontSize: 100.sp,
                       letterSpacing: 0,
                       fontWeight: FontWeight.bold,
@@ -101,3 +132,4 @@ class CircleWidget extends StatelessWidget {
     );
   }
 }
+
