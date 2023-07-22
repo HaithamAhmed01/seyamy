@@ -25,7 +25,7 @@ dependencies:
   easy_localization: ^3.0.2
   
   # NOTIFICATION
-  flutter_local_notifications: ^14.1.1
+#  flutter_local_notifications: ^14.1.1
   
   # Configuration and utilities
   flutter_native_splash: ^2.2.19

@@ -32,6 +32,7 @@ class _MoreScreenState extends State<MoreScreen> {
               ListTile(
                 title: const Text('Light Theme'),
                 trailing: Switch(
+                  
                   value: themeCubit.state == AppTheme.light,
                   onChanged: (value) {
                     if (value) {
