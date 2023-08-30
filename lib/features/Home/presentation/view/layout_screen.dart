@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:seyamy/core/utils/app_colors.dart';
 import 'package:seyamy/features/Home/presentation/manger/layout_cubit/cubit.dart';
 import 'package:seyamy/features/Home/presentation/manger/layout_cubit/state.dart';
 import 'package:seyamy/features/Home/presentation/widgets/appbar_widget.dart';

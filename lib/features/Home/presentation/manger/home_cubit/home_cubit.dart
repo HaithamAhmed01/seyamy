@@ -10,10 +10,23 @@ class HomeCubit extends Cubit<HomeState> {
 
   int day = 0;
 
+  int num = 0;
+
   void addNum() {
-    if (day != 0) {
+    if (day != 0 && num != 0) {
       day--;
+      num--;
     }
     emit(HomeAddNum());
+  }
+
+  void selectNumber(int number) {
+    num = number;
+    emit(HomeSelectNum());
+  }
+
+  void addNumber() {
+    day = num;
+    emit(HomeSelectNum());
   }
 }
