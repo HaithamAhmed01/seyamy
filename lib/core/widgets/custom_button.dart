@@ -9,6 +9,7 @@ class CustomButton extends StatefulWidget {
   final double? width;
   final double? width2;
   final VoidCallback onTap;
+  final Widget? icon;
 
   const CustomButton({
     super.key,
@@ -18,6 +19,7 @@ class CustomButton extends StatefulWidget {
     this.borderRadius,
     this.width,
     this.width2,
+    this.icon,
   });
 
   @override
@@ -29,48 +31,68 @@ class _CustomButtonState extends State<CustomButton> {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: widget.onTap,
-      onTapDown: (_) {
-        setState(() {
-          _isPressed = true;
-        });
-      },
-      onTapUp: (_) {
-        setState(() {
-          _isPressed = false;
-        });
-      },
-      onTapCancel: () {
-        setState(() {
-          _isPressed = false;
-        });
-      },
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 150),
-        curve: Curves.easeIn,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
-          color: widget.color ?? AppColors.bottomColor,
-          boxShadow: [
-            BoxShadow(
-              color: widget.color?.withOpacity(.5) ??
-                  AppColors.bottomColor.withOpacity(.5),
-              offset: const Offset(0, 4),
-              blurRadius: 20,
-            )
-          ],
-        ),
-        width: _isPressed
-            ? widget.width2 ?? context.width * .5
-            : widget.width ?? context.width * .6,
-        height: _isPressed ? context.height * .05 : context.height * .06,
-        child: Center(
-          child: Text(
-            widget.text,
-            style: context.button(),
+    return SizedBox(
+      width: widget.width ?? context.width * .6,
+      height: context.height * .06,
+      child: Column(
+        children: [
+          GestureDetector(
+            onTap: widget.onTap,
+            onTapDown: (_) {
+              setState(() {
+                _isPressed = true;
+              });
+            },
+            onTapUp: (_) {
+              setState(() {
+                _isPressed = false;
+              });
+            },
+            onTapCancel: () {
+              setState(() {
+                _isPressed = false;
+              });
+            },
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 150),
+              curve: Curves.easeIn,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
+                color: widget.color ?? AppColors.bottomColor,
+                boxShadow: [
+                  BoxShadow(
+                    color: widget.color?.withOpacity(.5) ??
+                        AppColors.bottomColor.withOpacity(.5),
+                    offset: const Offset(0, 4),
+                    blurRadius: 20,
+                  )
+                ],
+              ),
+              width: _isPressed
+                  ? widget.width2 ?? context.width * .5
+                  : widget.width ?? context.width * .6,
+              height: _isPressed ? context.height * .05 : context.height * .06,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: widget.icon == null
+                    ? [
+                        Text(
+                          widget.text,
+                          style: context.button(),
+                        ),
+                      ]
+                    : [
+                        widget.icon!,
+                        8.width,
+                        Text(
+                          widget.text,
+                          style: context.button(),
+                        ),
+                      ],
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

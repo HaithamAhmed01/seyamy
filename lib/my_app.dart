@@ -3,6 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:seyamy/features/Home/presentation/manger/home_cubit/home_cubit.dart';
 import 'package:seyamy/features/Home/presentation/manger/layout_cubit/cubit.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -43,6 +44,7 @@ class StartApp extends StatelessWidget {
                   preferences: sl.get<SharedPreferences>(),
                 )),
         BlocProvider(create: (BuildContext context) => LayoutCubit()),
+        BlocProvider(create: (BuildContext context) => HomeCubit()),
       ],
       child: ScreenUtilInit(
         designSize: const Size(360, 690),

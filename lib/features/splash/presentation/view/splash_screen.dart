@@ -4,11 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rive/rive.dart';
+import 'package:seyamy/core/utils/app_assets.dart';
 import 'package:seyamy/core/utils/helper.dart';
-import 'package:seyamy/features/more/presentation/manger/theme_cubit/theme_state.dart';
 
 import '../../../../config/routes/app_rout.dart';
-import '../../../../core/utils/app_asstes_path.dart';
 import '../../../../core/utils/app_prefs.dart';
 import '../../../../core/utils/injection_container.dart';
 import '../../../more/presentation/manger/theme_cubit/theme_cubit.dart';
@@ -37,10 +36,10 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: themeCubit.them
             ? const RiveAnimation.asset(
-                AnimationAssets.splashLight,
+                Assets.animationMeshGHAMZALIGHT,
               )
             : const RiveAnimation.asset(
-                AnimationAssets.splashDark,
+                Assets.animationMeshGHAMZADark,
               ),
       ),
     );

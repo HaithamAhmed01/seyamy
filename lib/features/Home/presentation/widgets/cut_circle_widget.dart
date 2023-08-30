@@ -14,7 +14,7 @@ class QuarterCirclePainter extends CustomPainter {
     final paint = Paint()
       ..color = AppColors.secondaryColor
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 1.0;
+      ..strokeWidth = 1.5;
 
     final center = Offset(size.width / 2, size.height / 2);
     final radius = min(size.width / 2, size.height / 2);

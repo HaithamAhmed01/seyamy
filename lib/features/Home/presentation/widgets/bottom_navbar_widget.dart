@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:seyamy/core/utils/app_asstes_path.dart';
+import 'package:seyamy/core/utils/app_assets.dart';
 import 'package:seyamy/core/utils/app_colors.dart';
 import 'package:seyamy/core/utils/helper.dart';
 import 'package:seyamy/features/Home/presentation/manger/layout_cubit/cubit.dart';
 
 import '../../../more/presentation/manger/theme_cubit/theme_cubit.dart';
 import '../../../more/presentation/manger/theme_cubit/theme_state.dart';
-
-
 
 class BottomNavBarWidget extends StatelessWidget {
   const BottomNavBarWidget({
@@ -38,14 +36,14 @@ class BottomNavBarWidget extends StatelessWidget {
               icon: bottomNavCurrentIndex == 0
                   ? themeCubit.them
                       ? SvgPicture.asset(
-                          ImageAssets.iconHome,
+                          Assets.iconsHome,
                         )
                       : SvgPicture.asset(
-                          ImageAssets.iconHome,
+                          Assets.iconsHome,
                           color: AppColors.secondaryColor,
                         )
                   : SvgPicture.asset(
-                      ImageAssets.iconHome,
+                      Assets.iconsHome,
                       color: AppColors.labelColor,
                     ),
               label: 'الرئيسية',
@@ -54,14 +52,14 @@ class BottomNavBarWidget extends StatelessWidget {
               icon: bottomNavCurrentIndex == 1
                   ? themeCubit.them
                       ? SvgPicture.asset(
-                          ImageAssets.iconFadl,
+                          Assets.iconsFadl,
                         )
                       : SvgPicture.asset(
-                          ImageAssets.iconFadl,
+                          Assets.iconsFadl,
                           color: AppColors.secondaryColor,
                         )
                   : SvgPicture.asset(
-                      ImageAssets.iconFadl,
+                      Assets.iconsFadl,
                       color: AppColors.labelColor,
                     ),
               label: 'فضل الصيام',
@@ -70,14 +68,14 @@ class BottomNavBarWidget extends StatelessWidget {
               icon: bottomNavCurrentIndex == 2
                   ? themeCubit.them
                       ? SvgPicture.asset(
-                          ImageAssets.iconMore,
+                          Assets.iconsMore,
                         )
                       : SvgPicture.asset(
-                          ImageAssets.iconMore,
+                          Assets.iconsMore,
                           color: AppColors.secondaryColor,
                         )
                   : SvgPicture.asset(
-                      ImageAssets.iconMore,
+                      Assets.iconsMore,
                       color: AppColors.labelColor,
                     ),
               label: context.textTr("more"),

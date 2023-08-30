@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:seyamy/core/utils/app_asstes_path.dart';
+import 'package:seyamy/core/utils/app_assets.dart';
 
 class OnBoardingModel extends Equatable {
   final List<OnBoardingDetails> onBoardingDetails;
@@ -37,18 +37,18 @@ List<OnBoardingDetails> onBoarding = [
   const OnBoardingDetails(
     text: '“ وسيلة جديدة وسهله للتذكير بالصيام ”',
     title: 'مرحبا بك في تطبيق صيامي',
-    image: ImageAssets.imageOnBoarding1,
+    image: Assets.imagesOnboarding1,
   ),
   const OnBoardingDetails(
     text:
         'يمكنك بكل بسهولة اضافة عدد الايام المراد صيامها ويقوم التطبيق تلقائيا بارسال اشعارات يوميا للتنبيه بصيام هذه الايام وتقل تدريجيا بتأكيد صيامها ',
     title: 'سهولة في الاستخدام',
-    image: ImageAssets.imageOnBoarding2,
+    image: Assets.imagesOnboarding2,
   ),
   const OnBoardingDetails(
     text:
         'يمكنكم ايضا الحصول علي اشعارات للتذكير بصيام النوافل اقتداءً بسنة النبي الكريم صلي الله عليه وسلم',
     title: 'المزيد من المميزات',
-    image: ImageAssets.imageOnBoarding3,
+    image: Assets.imagesOnboarding3,
   ),
 ];

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seyamy/core/utils/app_assets.dart';
 import 'package:seyamy/core/utils/helper.dart';
 import 'package:seyamy/core/widgets/custom_button.dart';
 
@@ -11,7 +12,7 @@ class ErrorScreen extends StatelessWidget {
       child: Scaffold(
         body: Stack(
           children: [
-            Image.asset('assets/images/7_Error.png',
+            Image.asset(Assets.images7Error,
                 fit: BoxFit.cover, height: context.height,
             width: context.width,
             ),

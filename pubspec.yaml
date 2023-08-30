@@ -55,8 +55,8 @@ dev_dependencies:
     sdk: flutter
 
 flutter_native_splash:
-  background_image: "assets/images/splash light.png"
-  background_image_dark: "assets/images/splash dark.png"
+  background_image: "assets/images/splash_light.png"
+  background_image_dark: "assets/images/splash_dark.png"
 
 flutter:
   uses-material-design: true
@@ -68,7 +68,6 @@ flutter:
     - assets/animation/
     - assets/lang/
     - assets/
-
   # Fonts used in the project
   fonts:
     - family: Cairo
@@ -87,5 +86,12 @@ flutter:
           weight: 500
         - asset: assets/fonts/Cairo-Regular.ttf
           weight: 400
-        - asset: assets/fonts/Cairo-VariableFont_slnt,wght.ttf
+        - asset: assets/fonts/Cairo-VariableFont.ttf
           weight: 100
+
+
+flutter_assets:
+  assets_path: assets/
+  output_path: lib/core/utils/
+  filename: app_assets.dart
+  field_prefix: 
