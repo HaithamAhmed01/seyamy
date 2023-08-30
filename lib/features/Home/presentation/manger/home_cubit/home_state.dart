@@ -7,4 +7,8 @@ class HomeInitial extends HomeState {}
 
 class HomeAddNum extends HomeState {}
 
+class HomeLoadNum extends HomeState {}
+
+class HomeDecreaseNum extends HomeState {}
+
 class HomeSelectNum extends HomeState {}
