@@ -97,6 +97,7 @@ ThemeData light = ThemeData(
   inputDecorationTheme: buildInputDecoration(),
   fontFamily: AppFontConstants.fontFamily,
 );
+
 InputDecorationTheme buildInputDecoration() {
   return InputDecorationTheme(
     errorStyle: TextStyle(
