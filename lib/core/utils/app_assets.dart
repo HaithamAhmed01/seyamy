@@ -69,14 +69,6 @@ class Assets {
   /// assets/icons/Arrow.svg
   static const String iconsArrow = "assets/icons/Arrow.svg";
 
-  /// Assets for iconsAutoMode
-  /// assets/icons/autoMode.svg
-  static const String iconsAutoMode = "assets/icons/autoMode.svg";
-
-  /// Assets for iconsCancel
-  /// assets/icons/cancel.svg
-  static const String iconsCancel = "assets/icons/cancel.svg";
-
   /// Assets for iconsCopy
   /// assets/icons/copy.svg
   static const String iconsCopy = "assets/icons/copy.svg";
@@ -109,6 +101,10 @@ class Assets {
   /// assets/icons/home.svg
   static const String iconsHome = "assets/icons/home.svg";
 
+  /// Assets for iconsIcLauncher
+  /// assets/icons/ic_launcher.png
+  static const String iconsIcLauncher = "assets/icons/ic_launcher.png";
+
   /// Assets for iconsInfo
   /// assets/icons/info.svg
   static const String iconsInfo = "assets/icons/info.svg";
@@ -120,10 +116,6 @@ class Assets {
   /// Assets for iconsLeft
   /// assets/icons/left.svg
   static const String iconsLeft = "assets/icons/left.svg";
-
-  /// Assets for iconsLightMode
-  /// assets/icons/lightMode.svg
-  static const String iconsLightMode = "assets/icons/lightMode.svg";
 
   /// Assets for iconsLogo
   /// assets/icons/logo.svg

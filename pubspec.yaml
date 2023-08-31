@@ -69,6 +69,8 @@ flutter:
     - assets/animation/
     - assets/lang/
     - assets/
+    - assets/fonts/
+
   # Fonts used in the project
   fonts:
     - family: Cairo
