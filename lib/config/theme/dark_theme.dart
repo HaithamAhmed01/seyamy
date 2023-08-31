@@ -41,13 +41,11 @@ ThemeData dark = ThemeData(
   textTheme: TextTheme(
     subtitle1: TextStyle(
       fontSize: 18.0.sp,
-      height: 2,
       fontWeight: AppFontWeight.bold,
       color: AppColors.whiteColor,
     ),
     subtitle2: TextStyle(
       fontSize: 16.0.sp,
-      height: 2,
       fontWeight: AppFontWeight.bold,
       color: AppColors.whiteColor,
     ),

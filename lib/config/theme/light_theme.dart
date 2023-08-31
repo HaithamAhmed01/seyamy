@@ -41,13 +41,11 @@ ThemeData light = ThemeData(
   textTheme: TextTheme(
     subtitle1: TextStyle(
       fontSize: 18.0.sp,
-      height: 2,
       fontWeight: AppFontWeight.bold,
       color: AppColors.primaryColor,
     ),
     subtitle2: TextStyle(
       fontSize: 16.0.sp,
-      height: 2,
       fontWeight: AppFontWeight.bold,
       color: AppColors.primaryColor,
     ),
@@ -99,6 +97,7 @@ ThemeData light = ThemeData(
   inputDecorationTheme: buildInputDecoration(),
   fontFamily: AppFontConstants.fontFamily,
 );
+
 InputDecorationTheme buildInputDecoration() {
   return InputDecorationTheme(
     errorStyle: TextStyle(
