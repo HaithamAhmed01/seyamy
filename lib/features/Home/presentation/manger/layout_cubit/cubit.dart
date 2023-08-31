@@ -4,6 +4,7 @@ import 'package:seyamy/features/Home/presentation/manger/layout_cubit/state.dart
 import 'package:seyamy/features/Home/presentation/view/home_screen.dart';
 
 import '../../../../../core/widgets/ErrorScreen.dart';
+import '../../../../fadl_alseyam/presentation/view/fadl_alseyam_screen.dart';
 import '../../../../more/presentation/view/more_screen.dart';
 
 class LayoutCubit extends Cubit<LayoutState> {
@@ -23,7 +24,7 @@ class LayoutCubit extends Cubit<LayoutState> {
 
   List<Widget> bottomScreens = [
     const HomeScreen(),
-    const ErrorScreen(),
+    const FadlAlseyamScreen(),
     const MoreScreen(),
   ];
 
