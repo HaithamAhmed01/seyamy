@@ -6,12 +6,6 @@ class FadlAlseyamScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      physics: BouncingScrollPhysics(),
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
-        child: FadlAlseyamBody(),
-      ),
-    );
+    return const FadlAlseyamBody();
   }
 }
