@@ -3,7 +3,6 @@ import 'package:lottie/lottie.dart';
 import 'package:seyamy/core/utils/app_assets.dart';
 import 'package:seyamy/core/utils/helper.dart';
 
-import '../../data/model/ExpandableContent.dart';
 import 'expandable_widget.dart';
 
 class FadlAlseyamBody extends StatelessWidget {
