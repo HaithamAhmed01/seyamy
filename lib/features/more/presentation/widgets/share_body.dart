@@ -36,7 +36,7 @@ class ShareBody extends StatelessWidget {
           ),
           50.height,
           Text(
-            'شارك التطبيق وادعمنا ',
+            context.textTr("Share the App and Support Us"),
             style: context.subtitle2().copyWith(
                   color: themeCubit.them
                       ? AppColors.primaryLightColor
@@ -53,7 +53,7 @@ class ShareBody extends StatelessWidget {
                   padding: const EdgeInsets.only(bottom: 16),
                   child: ShareItem(
                     icon: dataShare[index].icon,
-                    text: dataShare[index].text,
+                    text: context.textTr(dataShare[index].text),
                     onTab: dataShare[index].onTab,
                   ),
                 );

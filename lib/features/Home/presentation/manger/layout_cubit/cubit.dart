@@ -17,9 +17,9 @@ class LayoutCubit extends Cubit<LayoutState> {
 
 //List of Item in TabBar
   List<String> itemsTabBar = [
-    'الرئيسية',
-    'فضل الصيام',
-    'المزيد',
+    "Home",
+    "Advantages fasting",
+    "More",
   ];
 
   List<Widget> bottomScreens = [

@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:seyamy/core/utils/helper.dart';
 import 'package:seyamy/features/more/presentation/manger/theme_cubit/theme_state.dart';
+
 import '../../../more/presentation/manger/theme_cubit/theme_cubit.dart';
 import '../../../more/presentation/widgets/container_widget.dart';
 import '../../data/model/ExpandableContent.dart';
@@ -18,6 +20,7 @@ class ExpandableWidget extends StatefulWidget {
 class _ExpandableWidgetState extends State<ExpandableWidget> {
   @override
   Widget build(BuildContext context) {
+    
     return ListView.builder(
       itemCount: dataExpandable.length,
       itemBuilder: (context, index) {
@@ -32,13 +35,13 @@ class _ExpandableWidgetState extends State<ExpandableWidget> {
                   child: ExpansionTile(
                     maintainState: false,
                     title: Text(
-                      dataExpandable[index].header,
+                      context.textTr(dataExpandable[index].header),
                       style: context.subtitle2(),
                     ),
                     children: [
                       ListTile(
                         title: Text(
-                          dataExpandable[index].body,
+                          context.textTr(dataExpandable[index].body),
                           style: context.bodyText2(),
                           textAlign: TextAlign.start,
                         ),

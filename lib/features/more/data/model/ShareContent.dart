@@ -17,22 +17,22 @@ class ShareContent {
 
 List<ShareContent> dataShare = [
   ShareContent(
-    text: 'شارك التطبيق علي فيسبوك',
+    text: "Share_header1",
     icon: SvgPicture.asset(Assets.iconsFacebook),
     onTab: () {},
   ),
   ShareContent(
-    text: 'شارك التطبيق علي تيليجرام',
+    text: "Share_header2",
     icon: SvgPicture.asset(Assets.iconsTelegram),
     onTab: () {},
   ),
   ShareContent(
-    text: 'شارك التطبيق علي واتساب',
+    text: "Share_header3",
     icon: SvgPicture.asset(Assets.iconsWhatsapp),
     onTab: () {},
   ),
   ShareContent(
-    text: 'اضغط لنسخ الرابط',
+    text: "Share_header4",
     icon: SvgPicture.asset(Assets.iconsCopy),
     onTab: () {},
   ),

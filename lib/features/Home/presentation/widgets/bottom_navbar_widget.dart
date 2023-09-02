@@ -46,7 +46,7 @@ class BottomNavBarWidget extends StatelessWidget {
                       Assets.iconsHome,
                       color: AppColors.labelColor,
                     ),
-              label: 'الرئيسية',
+              label: context.textTr("Home"),
             ),
             BottomNavigationBarItem(
               icon: bottomNavCurrentIndex == 1
@@ -62,7 +62,7 @@ class BottomNavBarWidget extends StatelessWidget {
                       Assets.iconsFadl,
                       color: AppColors.labelColor,
                     ),
-              label: 'فضل الصيام',
+              label: context.textTr("Advantages fasting"),
             ),
             BottomNavigationBarItem(
               icon: bottomNavCurrentIndex == 2
@@ -78,7 +78,7 @@ class BottomNavBarWidget extends StatelessWidget {
                       Assets.iconsMore,
                       color: AppColors.labelColor,
                     ),
-              label: context.textTr("more"),
+              label: context.textTr("More"),
             ),
           ],
         );

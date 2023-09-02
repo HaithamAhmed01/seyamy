@@ -34,11 +34,14 @@ class BodyWidget extends StatelessWidget {
           child: Column(
             children: [
               33.height,
-              Text(
-                'كم يوم تريد أن تصوم ؟',
-                style: context.subtitle1().copyWith(
-                      color: AppColors.secondaryColor,
-                    ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Text(
+                  context.textTr("How many days do you want to fast?"),
+                  style: context.subtitle1().copyWith(
+                        color: AppColors.secondaryColor,
+                      ),
+                ),
               ),
               SizedBox(
                 height: context.height * .5,
@@ -52,30 +55,37 @@ class BodyWidget extends StatelessWidget {
                         CustomButton(
                           width: context.width * .5,
                           width2: context.width * .4,
-                          text: 'صٌمتٌ يوما',
+                          text: context.textTr("Silence for a day"),
                           onTap: () {
                             dialog(
                               context: context,
-                              widget: Column(
-                                children: [
-                                  Text(
-                                    'تهانينا ، لقد أتتمت يوما',
-                                    style: context.subtitle2().copyWith(
-                                          color: AppColors.secondaryColor,
-                                        ),
-                                  ),
-                                  10.height,
-                                  Text(
-                                    '“نسأل الله أن يتقبل منا ومنكم”',
-                                    style: context.subtitle2().copyWith(
-                                          color: themeCubit.them
-                                              ? AppColors.primaryColor
-                                              : AppColors.subDarkColor,
-                                        ),
-                                  ),
-                                  10.height,
-                                  Lottie.asset(Assets.animationSuccessful),
-                                ],
+                              widget: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      context.textTr(
+                                          "Congratulations, you have completed your day"),
+                                      style: context.subtitle2().copyWith(
+                                            color: AppColors.secondaryColor,
+                                          ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    10.height,
+                                    Text(
+                                      context.textTr(
+                                          "We ask God to accept it from us and from you"),
+                                      style: context.subtitle2().copyWith(
+                                            color: themeCubit.them
+                                                ? AppColors.primaryColor
+                                                : AppColors.subDarkColor,
+                                          ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    10.height,
+                                    Lottie.asset(Assets.animationSuccessful),
+                                  ],
+                                ),
                               ),
                               onPressed: () {
                                 _confettiController.play();
@@ -94,7 +104,7 @@ class BodyWidget extends StatelessWidget {
                               widget: Column(
                                 children: [
                                   Text(
-                                    'تعديل عدد الايام',
+                                    context.textTr("Edit the number of days"),
                                     style: context.subtitle2().copyWith(
                                           color: AppColors.secondaryColor,
                                         ),
@@ -156,18 +166,22 @@ class BodyWidget extends StatelessWidget {
                   : CustomButton(
                       width: context.width * .6,
                       width2: context.width * .5,
-                      text: 'إضافة',
+                      text: context.textTr("Add"),
                       icon: SvgPicture.asset(Assets.iconsAdd),
                       onTap: () {
                         dialog(
                           context: context,
                           widget: Column(
                             children: [
-                              Text(
-                                'حدد عدد الايام المراد صيامها',
-                                style: context.subtitle2().copyWith(
-                                      color: AppColors.secondaryColor,
-                                    ),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                child: Text(
+                                  context.textTr("Determine the number of days you want to fast"),
+                                  style: context.subtitle2().copyWith(
+                                        color: AppColors.secondaryColor,
+                                      ),
+                                  textAlign: TextAlign.center,
+                                ),
                               ),
                               SizedBox(
                                 height: context.height * .3,

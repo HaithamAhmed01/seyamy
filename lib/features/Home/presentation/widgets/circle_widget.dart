@@ -107,7 +107,7 @@ class CircleWidget extends StatelessWidget {
               children: [
                 day != 0
                     ? Text(
-                        'الأيام المتبقية',
+                  context.textTr("Remaining days"),
                         style: context.subtitle2().copyWith(
                               color: AppColors.yellow,
                             ),

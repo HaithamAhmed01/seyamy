@@ -17,7 +17,7 @@ void dialog(
     builder: (context) => AlertDialog(
       contentPadding: const EdgeInsets.all(0),
       content: Container(
-        height: context.height * .5,
+        height: context.height * .55,
         width: context.width,
         decoration: ShapeDecoration(
           color: themeCubit.them
@@ -39,7 +39,7 @@ void dialog(
                   CustomButton(
                     width: context.width * .3,
                     width2: context.width * .2,
-                    text: 'تم',
+                    text: context.textTr("Ok"),
                     onTap: onPressed,
                   ),
                   16.width,
@@ -49,7 +49,7 @@ void dialog(
                     color: themeCubit.them
                         ? AppColors.subLightColor
                         : AppColors.whiteColor,
-                    text: 'الغاء',
+                    text: context.textTr("Cancel"),
                     onTap: () {
                       Navigator.pop(context);
                     },

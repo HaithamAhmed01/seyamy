@@ -17,31 +17,28 @@ class AdvantageContent {
 
 List<AdvantageContent> dataAdvantage = [
   AdvantageContent(
-    header: 'نبذه عن التطبيق',
-    body:
-        'تطبيق صيامي هو تطبيق بسيط وسهل الاستخدام تم تصميمه لمساعدة المسلمين في تتبع أيام الصيام المراد قضائها حيث يسمح التطبيق للمستخدمين بإدخال عدد الأيام التي يحتاجون إلى صيامها ويقوم بإرسال تذكيرات يومية لهم للصيام وتتوقف الاشعارات عند صيام جميع الايام.',
+    header: "Advantage_header1",
+    body: "Advantage_body1",
     icon: Image.asset(Assets.iconsIcLauncher),
   ),
   AdvantageContent(
-    header: 'الوضع الليلي / الداكن',
-    body:
-        'قمنا باضافة الوضع الليلي في التطبيق حتي لا نؤثر علي تجربة المستخدمين الذين يفضلون هذا الوضع حفاظا علي راحة أعينهم.',
+    header: "Advantage_header2",
+    body: "Advantage_body2",
     icon: SvgPicture.asset(Assets.iconsMode),
   ),
   AdvantageContent(
-    header: 'المصادر',
-    body: 'مصادر فضل الصيام المذكورة في التطبيق كلها مأخوذه من الكتاب والسنه.',
+    header: "Advantage_header3",
+    body: "Advantage_body3",
     icon: SvgPicture.asset(Assets.iconsSources),
   ),
   AdvantageContent(
-    header: 'تقييمك يهمنا',
-    body:
-        'منذ بداية نشر التطبيق ونحن نعمل علي التحديث والتطوير المستمر حتي يتناسب مع كل الهواتف فلا تتردد وتتجاهل تقييم التطبيق لدعمنا.',
+    header: "Advantage_header4",
+    body: "Advantage_body4",
     icon: SvgPicture.asset(Assets.iconsStar),
   ),
   AdvantageContent(
-    header: 'مزايا اكثر',
-    body: 'يحتوي التطبيق علي مميزات كثير لا يمكن حصرها\nاستخدمه واكتشفها.',
+    header: "Advantage_header5",
+    body: "Advantage_body5",
     icon: SvgPicture.asset(Assets.iconsCrown),
   ),
 ];

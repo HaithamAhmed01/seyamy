@@ -12,27 +12,27 @@ class ExpandableContent {
 
 List<ExpandableContent> dataExpandable = [
   ExpandableContent(
-    header: 'فضل صيام الأيام البيض في شوال',
-    body: 'Content of section 1',
+    header: "Fadl_header1",
+    body: "Fadl_body1",
   ),
   ExpandableContent(
-    header: 'فضل صيام العشر من  ذي الحجة',
-    body: 'Content of section 2',
+    header: "Fadl_header2",
+    body: "Fadl_body2",
   ),
   ExpandableContent(
-    header: 'فضل صيام الإثنين والخميس',
-    body: 'Content of section 2',
+    header: "Fadl_header3",
+    body: "Fadl_body3",
   ),
   ExpandableContent(
-    header: 'فضل صيام يوم عاشوراء',
-    body: 'Content of section 2',
+    header: "Fadl_header4",
+    body: "Fadl_body4",
   ),
   ExpandableContent(
-    header: 'فضل صيام يوم  عرفه',
-    body: 'Content of section 2',
+    header: "Fadl_header5",
+    body: "Fadl_body5",
   ),
   ExpandableContent(
-    header: 'مبطلات الصيام',
-    body: 'Content of section 2',
+    header: "Fadl_header6",
+    body: "Fadl_body6",
   ),
 ];
