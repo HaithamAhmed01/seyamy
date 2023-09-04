@@ -20,7 +20,6 @@ class ExpandableWidget extends StatefulWidget {
 class _ExpandableWidgetState extends State<ExpandableWidget> {
   @override
   Widget build(BuildContext context) {
-    
     return ListView.builder(
       itemCount: dataExpandable.length,
       itemBuilder: (context, index) {
