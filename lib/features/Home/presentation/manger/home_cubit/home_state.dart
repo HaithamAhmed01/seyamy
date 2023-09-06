@@ -12,3 +12,7 @@ class HomeLoadNum extends HomeState {}
 class HomeDecreaseNum extends HomeState {}
 
 class HomeSelectNum extends HomeState {}
+
+class HomeDisabledNotification extends HomeState {}
+
+class HomeEnabledNotification extends HomeState {}

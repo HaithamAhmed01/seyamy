@@ -2,6 +2,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:seyamy/core/notifications/notification_helper.dart';
+import 'package:seyamy/core/notifications/notifications_utils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../../core/utils/injection_container.dart';
@@ -29,6 +31,7 @@ class HomeCubit extends Cubit<HomeState> {
       day--;
       num--;
       await sl.get<SharedPreferences>().setInt('day', day);
+      notificationsFasting();
       log("decreaseDay  $day");
       emit(HomeDecreaseNum());
     }
@@ -43,7 +46,21 @@ class HomeCubit extends Cubit<HomeState> {
     // Store the selected number in SharedPreferences
     day = num;
     await sl.get<SharedPreferences>().setInt('day', day);
+    notificationsFasting();
     log("addNumber  $day");
     emit(HomeAddNum());
+  }
+
+  void notificationsFasting() {
+    log("Notification day load  $day");
+    if (day == 0) {
+      // Disable notifications
+      NotificationController.cancelFastingNotifications();
+      emit(HomeDisabledNotification());
+    } else {
+      // Enable notifications
+      NotificationUtils.showAlarmNotificationFasting();
+      emit(HomeEnabledNotification());
+    }
   }
 }

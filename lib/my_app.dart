@@ -44,7 +44,10 @@ class StartApp extends StatelessWidget {
                   preferences: sl.get<SharedPreferences>(),
                 )),
         BlocProvider(create: (BuildContext context) => LayoutCubit()),
-        BlocProvider(create: (BuildContext context) => HomeCubit()..loadDay()),
+        BlocProvider(
+            create: (BuildContext context) => HomeCubit()
+              ..loadDay()
+              ..notificationsFasting()),
       ],
       child: ScreenUtilInit(
         designSize: const Size(360, 690),
