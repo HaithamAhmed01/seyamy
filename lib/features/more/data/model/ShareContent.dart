@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_svg/svg.dart';
 
-import '../../../../core/utils/app_assets.dart';
 
 class ShareContent {
   ShareContent({
@@ -15,25 +13,6 @@ class ShareContent {
   final GestureTapCallback onTab;
 }
 
-List<ShareContent> dataShare = [
-  ShareContent(
-    text: "Share_header1",
-    icon: SvgPicture.asset(Assets.iconsFacebook),
-    onTab: () {},
-  ),
-  ShareContent(
-    text: "Share_header2",
-    icon: SvgPicture.asset(Assets.iconsTelegram),
-    onTab: () {},
-  ),
-  ShareContent(
-    text: "Share_header3",
-    icon: SvgPicture.asset(Assets.iconsWhatsapp),
-    onTab: () {},
-  ),
-  ShareContent(
-    text: "Share_header4",
-    icon: SvgPicture.asset(Assets.iconsCopy),
-    onTab: () {},
-  ),
-];
+
+
+

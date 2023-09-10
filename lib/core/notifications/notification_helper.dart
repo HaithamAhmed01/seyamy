@@ -45,7 +45,6 @@ class NotificationController {
             defaultColor: AppColors.primaryColor,
             ledColor: AppColors.primaryColor,
           ),
-          
         ],
         channelGroups: [
           NotificationChannelGroup(
@@ -73,8 +72,15 @@ class NotificationController {
   }
 
   static Future<void> cancelFastingNotifications() async {
-    await AwesomeNotifications().cancel(1); // Use the same ID as in scheduleMinuteNotifications
-    await AwesomeNotifications().cancel(2); // Use the same ID as in scheduleMinuteNotifications
+    // Use the same ID as in scheduleNotifications
+    await AwesomeNotifications().cancel(1);
+    await AwesomeNotifications().cancel(2);
   }
 
+  static Future<void> cancelFastingScheduledNotifications() async {
+    await AwesomeNotifications().cancel(3);
+    await AwesomeNotifications().cancel(4);
+    await AwesomeNotifications().cancel(5);
+    await AwesomeNotifications().cancel(6);
+  }
 }

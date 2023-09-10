@@ -39,7 +39,7 @@ void dialog(
                   CustomButton(
                     width: context.width * .3,
                     width2: context.width * .2,
-                    text: context.textTr("Ok"),
+                    text: context.textTr("Done"),
                     onTap: onPressed,
                   ),
                   16.width,

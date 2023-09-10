@@ -25,6 +25,10 @@ class Assets {
   /// assets/animation/Successful.json
   static const String animationSuccessful = "assets/animation/Successful.json";
 
+  /// Assets for animationWarning
+  /// assets/animation/warning.json
+  static const String animationWarning = "assets/animation/warning.json";
+
   /// Assets for fontsCairoBlack
   /// assets/fonts/Cairo-Black.ttf
   static const String fontsCairoBlack = "assets/fonts/Cairo-Black.ttf";

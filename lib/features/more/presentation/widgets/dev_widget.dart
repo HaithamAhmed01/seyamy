@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:seyamy/core/utils/function/launch_url.dart';
 import 'package:seyamy/core/utils/helper.dart';
 
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_string.dart';
 import '../manger/theme_cubit/theme_cubit.dart';
 import 'container_widget.dart';
 
@@ -66,7 +68,9 @@ class _DevWidgetState extends State<DevWidget> {
               color:
                   themeCubit.them ? AppColors.labelColor : AppColors.whiteColor,
             ),
-            onTap: () {},
+            onTap: () {
+              launchCustomUrl(context, AppStrings.linkedInLink);
+            },
           ),
           ListTile(
             leading: SvgPicture.asset(Assets.iconsMail),
@@ -79,7 +83,9 @@ class _DevWidgetState extends State<DevWidget> {
               color:
                   themeCubit.them ? AppColors.labelColor : AppColors.whiteColor,
             ),
-            onTap: () {},
+            onTap: () {
+              launchCustomUrl(context, AppStrings.mailLink);
+            },
           ),
           ListTile(
             leading: SvgPicture.asset(Assets.iconsInfo),

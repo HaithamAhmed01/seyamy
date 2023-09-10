@@ -19,17 +19,18 @@ class AppStrings {
   static const String locale = 'locale';
 
   //app
-  static const skip = "skip";
-  static const username = "username_hint";
-  static const password = "password_hint";
-  static const usernameError = "username_error";
-  static const passwordError = "password_error";
-  static const login = "login_button";
-  static const forgetPassword = "forgot_password_text";
-  static const registerText = "register_text";
-  static const loading = "loading";
-  static const retryAgain = "retry_again";
-  static const ok = "ok";
+  static const String appName = 'صيامي';
+  static const String skip = "skip";
+  static const String username = "username_hint";
+  static const String password = "password_hint";
+  static const String usernameError = "username_error";
+  static const String passwordError = "password_error";
+  static const String login = "login_button";
+  static const String forgetPassword = "forgot_password_text";
+  static const String registerText = "register_text";
+  static const String loading = "loading";
+  static const String retryAgain = "retry_again";
+  static const String ok = "ok";
   static const String emailHint = 'email_hint';
   static const String invalidEmail = "email_error";
   static const String resetPassword = "reset_password";
@@ -38,17 +39,17 @@ class AppStrings {
   static const String mobileNumberInvalid = "mobile_number_hint_message";
   static const String passwordInvalid = "password_hint_message";
   static const String alreadyHaveAccount = "already_have_account";
-  static const register = "register";
-  static const mobileNumber = "mobile_number_hint";
-  static const profilePicture = "upload_profile_picture";
-  static const photoGallery = "photo_from_galley";
-  static const photoCamera = "photo_from_camera";
-  static const home = "home";
-  static const notifications = "notification";
-  static const search = "search";
-  static const settings = "settings";
-  static const services = "services";
-  static const stores = "stores";
+  static const String register = "register";
+  static const String mobileNumber = "mobile_number_hint";
+  static const String profilePicture = "upload_profile_picture";
+  static const String photoGallery = "photo_from_galley";
+  static const String photoCamera = "photo_from_camera";
+  static const String home = "home";
+  static const String notifications = "notification";
+  static const String search = "search";
+  static const String settings = "settings";
+  static const String services = "services";
+  static const String stores = "stores";
   static const String details = "details";
   static const String about = "about";
   static const String storeDetails = "store_details";
@@ -56,6 +57,21 @@ class AppStrings {
   static const String contactUs = "contact_us";
   static const String inviteYourFriends = "invite_your_friends";
   static const String logout = "logout";
+  static const String youWantToExit = "youWantToExit";
+
+  static const String text = 'Hello, check out this link:';
+  static const String appLink =
+      'https://play.google.com/store/apps/details?id=com.seyamy.seyamy';
+  static const String mailLink =
+      'mailto:?subject= &body= ';
+  static const String whatsappLink =
+      'https://api.whatsapp.com/send?text=$text&url=$appLink';
+  static const String telegramLink =
+      'https://t.me/share/url?text=$text&url=$appLink';
+  static const String facebookLink =
+      'https://www.facebook.com/sharer/sharer.php?t=$text&u=$appLink';
+  static const String linkedInLink =
+      'https://www.linkedin.com/in/haitham-ahmed-a4626a19b/';
 
   // error handler
   static const String badRequestError = "bad_request_error";

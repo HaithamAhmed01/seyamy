@@ -13,7 +13,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   await NotificationController.initializeLocalNotifications();
-  PrayerNotifications().notifications();
+  GeneralNotifications().notifications();
   await di.init();
 
   SystemChrome.setPreferredOrientations([

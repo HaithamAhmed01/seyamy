@@ -3,12 +3,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:seyamy/core/utils/helper.dart';
+import 'package:store_redirect/store_redirect.dart';
 
 import '../../../../config/routes/app_rout.dart';
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../manger/theme_cubit/theme_cubit.dart';
 import 'container_widget.dart';
+
 
 class UtilsWidget extends StatelessWidget {
   const UtilsWidget({
@@ -68,7 +70,12 @@ class UtilsWidget extends StatelessWidget {
               color:
                   themeCubit.them ? AppColors.labelColor : AppColors.whiteColor,
             ),
-            onTap: () {},
+            onTap: () {
+              StoreRedirect.redirect(
+                androidAppId: "com.seyamy.seyamy",
+                iOSAppId: "",
+              );
+            },
           ),
         ],
       ),

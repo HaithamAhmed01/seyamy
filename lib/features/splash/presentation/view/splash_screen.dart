@@ -38,8 +38,17 @@ class _SplashScreenState extends State<SplashScreen> {
             ? const RiveAnimation.asset(
                 Assets.animationMeshGHAMZALIGHT,
               )
-            : const RiveAnimation.asset(
-                Assets.animationMeshGHAMZADark,
+            : SizedBox(
+                height: context.height * .3,
+                width: context.width,
+                child: SizedBox(
+                  height: context.height,
+                  width: context.width,
+                  child: const RiveAnimation.asset(
+                    Assets.animationMeshGHAMZADark,
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
       ),
     );

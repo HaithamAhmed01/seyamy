@@ -5,8 +5,8 @@ import 'package:awesome_notifications/awesome_notifications.dart';
     PERMISSIONS
 ************************************************ */
 
-class PrayerNotifications {
-  notifications() async {
+class GeneralNotifications {
+  void notifications() async {
     AwesomeNotifications().isNotificationAllowed().then((isAllowed) async {
       if (!isAllowed) {
         AwesomeNotifications().requestPermissionToSendNotifications();
@@ -28,7 +28,7 @@ class NotificationUtils {
         groupKey: 'basic_channel',
         title: 'تذكير بصيام الغد',
         body:
-        "يومٌ جديد وفُرصةٌ جديدة للتقرُّبِ إلى الله، فَلا تُفوِّتُها واحرِص على قضاء يومٍ جديدٍ من أيام الصيام المتبقية عليك.",
+            "يومٌ جديد وفُرصةٌ جديدة للتقرُّبِ إلى الله، فَلا تُفوِّتُها واحرِص على قضاء يومٍ جديدٍ من أيام الصيام المتبقية عليك.",
         showWhen: true,
         wakeUpScreen: true,
         displayOnBackground: true,
@@ -51,9 +51,8 @@ class NotificationUtils {
         id: 2,
         channelKey: 'basic_channel',
         groupKey: 'basic_channel',
-        title: 'تذكير بصيام الغد',
-        body:
-        "يومٌ جديد وفُرصةٌ جديدة للتقرُّبِ إلى الله، فَلا تُفوِّتُها واحرِص على قضاء يومٍ جديدٍ من أيام الصيام المتبقية عليك.",
+        title: "اقترب الفجر، استعد للسحور",
+        body: "تجنب الصيام جافًا وتناول وجبة سحور صحية ومغذية",
         showWhen: true,
         wakeUpScreen: true,
         displayOnBackground: true,
@@ -65,15 +64,134 @@ class NotificationUtils {
         preciseAlarm: true,
         allowWhileIdle: true,
         repeats: true,
-        hour: 00,
-        // 12 AM
+        hour: 2,
+        // 2 AM
         minute: 0,
         second: 0,
       ),
     );
   }
 
-  //*********************************// Prophet Muhammed //**********************//
+  static Future<void> showAlarmNotificationFastingScheduled() async {
+    // Calculate the next Sunday and Wednesday dates
+    final now = DateTime.now();
+    final nextSunday = now.add(Duration(days: DateTime.sunday - now.weekday));
+    final nextWednesday =
+        now.add(Duration(days: DateTime.wednesday - now.weekday));
+    final nextMonday = now.add(Duration(days: DateTime.monday - now.weekday));
+    final nextThursday =
+        now.add(Duration(days: DateTime.thursday - now.weekday));
+
+    await AwesomeNotifications().createNotification(
+      content: NotificationContent(
+        id: 3,
+        channelKey: 'basic_channel',
+        groupKey: 'basic_channel',
+        title: 'نذكرك بصيام غدا الاثنين',
+        body:
+            "عن أبي هريرة رضي الله عنه أن رسول الله صلى الله عليه وسلم قال : تُعرض الأعمال يوم الإثنين والخميس ، فأحب أن يعرض عملي وأنا صائم",
+        showWhen: true,
+        wakeUpScreen: true,
+        displayOnBackground: true,
+        displayOnForeground: true,
+        category: NotificationCategory.Reminder,
+        notificationLayout: NotificationLayout.BigText,
+      ),
+      schedule: NotificationCalendar(
+        weekday: nextSunday.weekday,
+        // 7 represents Sunday
+        preciseAlarm: true,
+        allowWhileIdle: true,
+        repeats: true,
+        hour: 21,
+        // 9 PM
+        minute: 0,
+        second: 0,
+      ),
+    );
+
+    await AwesomeNotifications().createNotification(
+      content: NotificationContent(
+        id: 4,
+        channelKey: 'basic_channel',
+        groupKey: 'basic_channel',
+        title: "اقترب الفجر، استعد للسحور",
+        body: "تجنب الصيام جافًا وتناول وجبة سحور صحية ومغذية",
+        showWhen: true,
+        wakeUpScreen: true,
+        displayOnBackground: true,
+        displayOnForeground: true,
+        category: NotificationCategory.Reminder,
+        notificationLayout: NotificationLayout.BigText,
+      ),
+      schedule: NotificationCalendar(
+        weekday: nextMonday.weekday,
+        // 7 represents Sunday
+        preciseAlarm: true,
+        allowWhileIdle: true,
+        repeats: true,
+        hour: 2,
+        // 2 AM
+        minute: 0,
+        second: 0,
+      ),
+    );
+    await AwesomeNotifications().createNotification(
+      content: NotificationContent(
+        id: 5,
+        channelKey: 'basic_channel',
+        groupKey: 'basic_channel',
+        title: 'نذكرك بصيام غدا الخميس',
+        body:
+            "عن أبي هريرة رضي الله عنه أن رسول الله صلى الله عليه وسلم قال : تُعرض الأعمال يوم الإثنين والخميس ، فأحب أن يعرض عملي وأنا صائم",
+        showWhen: true,
+        wakeUpScreen: true,
+        displayOnBackground: true,
+        displayOnForeground: true,
+        category: NotificationCategory.Reminder,
+        notificationLayout: NotificationLayout.BigText,
+      ),
+      schedule: NotificationCalendar(
+        weekday: nextWednesday.weekday,
+        // 3 represents Wednesday
+        preciseAlarm: true,
+        allowWhileIdle: true,
+        repeats: true,
+        hour: 21,
+        // 9 PM
+        minute: 13,
+        second: 0,
+      ),
+    );
+
+    await AwesomeNotifications().createNotification(
+      content: NotificationContent(
+        id: 6,
+        channelKey: 'basic_channel',
+        groupKey: 'basic_channel',
+        title: "اقترب الفجر، استعد للسحور",
+        body: "تجنب الصيام جافًا وتناول وجبة سحور صحية ومغذية",
+        showWhen: true,
+        wakeUpScreen: true,
+        displayOnBackground: true,
+        displayOnForeground: true,
+        category: NotificationCategory.Reminder,
+        notificationLayout: NotificationLayout.BigText,
+      ),
+      schedule: NotificationCalendar(
+        weekday: nextThursday.weekday,
+        // 7 represents Sunday
+        preciseAlarm: true,
+        allowWhileIdle: true,
+        repeats: true,
+        hour: 2,
+        // 2 AM
+        minute: 0,
+        second: 0,
+      ),
+    );
+  }
+
   static Future<void> showAlarmNotificationProphet() async {
     await AwesomeNotifications().createNotification(
       content: NotificationContent(

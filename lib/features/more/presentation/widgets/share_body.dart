@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_share/flutter_share.dart';
+import 'package:flutter_svg/svg.dart';
 
 import 'package:seyamy/core/utils/app_assets.dart';
 import 'package:seyamy/core/utils/app_colors.dart';
@@ -10,6 +12,8 @@ import 'package:seyamy/features/more/data/model/ShareContent.dart';
 
 import 'package:seyamy/features/more/presentation/widgets/share_item.dart';
 
+import '../../../../core/utils/app_string.dart';
+import '../../../../core/utils/function/launch_url.dart';
 import '../manger/theme_cubit/theme_cubit.dart';
 
 class ShareBody extends StatelessWidget {
@@ -17,6 +21,41 @@ class ShareBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<ShareContent> dataShare = [
+      ShareContent(
+        text: "Share_header1",
+        icon: SvgPicture.asset(Assets.iconsFacebook),
+        onTab: () {
+          launchCustomUrl(context, AppStrings.facebookLink);
+        },
+      ),
+      ShareContent(
+        text: "Share_header2",
+        icon: SvgPicture.asset(Assets.iconsTelegram),
+        onTab: () {
+          launchCustomUrl(context, AppStrings.telegramLink);
+        },
+      ),
+      ShareContent(
+        text: "Share_header3",
+        icon: SvgPicture.asset(Assets.iconsWhatsapp),
+        onTab: () {
+          launchCustomUrl(context, AppStrings.whatsappLink);
+        },
+      ),
+      ShareContent(
+        text: "Share_header4",
+        icon: SvgPicture.asset(Assets.iconsCopy),
+        onTab: () {
+          FlutterShare.share(
+            title: AppStrings.appName,
+            //text: 'تطبيق يحتوي علي كل ما يهم المسلم',
+            linkUrl: AppStrings.appLink,
+            chooserTitle: AppStrings.appName,
+          );
+        },
+      ),
+    ];
     final themeCubit = BlocProvider.of<ThemeCubit>(context);
     return Padding(
       padding: const EdgeInsets.all(16.0),

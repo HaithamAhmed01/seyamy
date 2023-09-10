@@ -45,9 +45,10 @@ class StartApp extends StatelessWidget {
                 )),
         BlocProvider(create: (BuildContext context) => LayoutCubit()),
         BlocProvider(
-            create: (BuildContext context) => HomeCubit()
-              ..loadDay()
-              ..notificationsFasting()),
+          create: (BuildContext context) => HomeCubit()
+            ..loadDay()
+            ..notificationsFasting(),
+        ),
       ],
       child: ScreenUtilInit(
         designSize: const Size(360, 690),
