@@ -48,9 +48,9 @@ class NotificationController {
         ],
         channelGroups: [
           NotificationChannelGroup(
-              channelGroupKey: 'basic_channel', channelGroupName: 'Reminders'),
+              channelGroupkey: 'basic_channel', channelGroupName: 'Reminders'),
           NotificationChannelGroup(
-              channelGroupKey: 'alert_channel', channelGroupName: 'Alerts'),
+              channelGroupkey: 'alert_channel', channelGroupName: 'Alerts'),
         ],
         debug: false);
   }

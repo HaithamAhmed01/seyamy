@@ -32,7 +32,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
         var cubit = LayoutCubit.get(context);
         var bottomNavCurrentIndex = cubit.bottomNavCurrentIndex;
         return WillPopScope(
-          onWillPop: dialogg,
+          onWillPop: dialogExit,
           child: UpgradeAlert(
             upgrader: Upgrader(showIgnore: false, messages: UpgraderMessages()),
             child: Scaffold(
@@ -52,7 +52,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
     );
   }
 
-  Future<bool> dialogg() async {
+  Future<bool> dialogExit() async {
     final themeCubit = BlocProvider.of<ThemeCubit>(context);
     return await showDialog(
       context: context,
