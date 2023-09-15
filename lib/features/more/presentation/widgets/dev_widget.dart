@@ -53,14 +53,14 @@ class _DevWidgetState extends State<DevWidget> {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              context.textTr("Developer"),
+              context.textTr(AppStrings.developer),
               style: context.caption(),
             ),
           ),
           ListTile(
             leading: SvgPicture.asset(Assets.iconsFollow),
             title: Text(
-              context.textTr("Follow Developer"),
+              context.textTr(AppStrings.followDeveloper),
               style: context.subtitle2(),
             ),
             trailing: Icon(
@@ -75,7 +75,7 @@ class _DevWidgetState extends State<DevWidget> {
           ListTile(
             leading: SvgPicture.asset(Assets.iconsMail),
             title: Text(
-              context.textTr("Contact Us About the App"),
+              context.textTr(AppStrings.contactAbout),
               style: context.subtitle2(),
             ),
             trailing: Icon(
@@ -90,7 +90,7 @@ class _DevWidgetState extends State<DevWidget> {
           ListTile(
             leading: SvgPicture.asset(Assets.iconsInfo),
             title: Text(
-              context.textTr("Version"),
+              context.textTr(AppStrings.version),
               style: context.subtitle2(),
             ),
             trailing: Text(

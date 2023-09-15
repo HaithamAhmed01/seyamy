@@ -75,7 +75,7 @@ class ShareBody extends StatelessWidget {
           ),
           50.height,
           Text(
-            context.textTr("Share the App and Support Us"),
+            context.textTr(AppStrings.shareContent),
             style: context.subtitle2().copyWith(
                   color: themeCubit.them
                       ? AppColors.primaryLightColor

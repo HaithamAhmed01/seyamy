@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:seyamy/core/utils/app_string.dart';
 import 'package:seyamy/core/utils/helper.dart';
 import 'package:seyamy/features/more/presentation/widgets/container_widget.dart';
 
@@ -24,13 +25,13 @@ class ThemWidget extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
-                  context.textTr("Shape"),
+                  context.textTr(AppStrings.shape),
                   style: context.caption(),
                 ),
               ),
               ListTile(
                 title: Text(
-                  context.textTr("Dark Mode"),
+                  context.textTr(AppStrings.darkMode),
                   style: context.subtitle2(),
                 ),
                 trailing: Switch(
@@ -46,12 +47,12 @@ class ThemWidget extends StatelessWidget {
               ),
               ListTile(
                 title: Text(
-                  context.textTr("Automatic"),
+                  context.textTr(AppStrings.automatic),
                   style:
                       context.subtitle2().copyWith(fontSize: 15.sp, height: 2),
                 ),
                 subtitle: Text(
-                  context.textTr("Enable it if you want to automatically change the app's interface according to your system's mode"),
+                  context.textTr(AppStrings.automaticContent),
                   style: context.caption().copyWith(height: 1.81),
                 ),
                 trailing: Switch(

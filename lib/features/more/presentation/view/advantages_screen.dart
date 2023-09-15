@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seyamy/core/utils/app_string.dart';
 import 'package:seyamy/core/utils/helper.dart';
 import '../widgets/advantages_body.dart';
 import '../widgets/appBar_widget.dart';
@@ -11,7 +12,7 @@ class AdvantagesScreen extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(
         context: context,
-        text: context.textTr("Application Advantages"),
+        text: context.textTr(AppStrings.applicationAdvantages),
       ),
       body: const AdvantagesBody(),
     );

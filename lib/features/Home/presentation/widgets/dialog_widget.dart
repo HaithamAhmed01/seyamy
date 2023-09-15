@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:seyamy/core/utils/app_colors.dart';
+import 'package:seyamy/core/utils/app_string.dart';
 import 'package:seyamy/core/utils/helper.dart';
 
 import '../../../../core/widgets/custom_button.dart';
@@ -39,7 +40,7 @@ void dialog(
                   CustomButton(
                     width: context.width * .3,
                     width2: context.width * .2,
-                    text: context.textTr("Done"),
+                    text: context.textTr(AppStrings.done),
                     onTap: onPressed,
                   ),
                   16.width,
@@ -49,7 +50,7 @@ void dialog(
                     color: themeCubit.them
                         ? AppColors.subLightColor
                         : AppColors.whiteColor,
-                    text: context.textTr("Cancel"),
+                    text: context.textTr(AppStrings.cancel),
                     onTap: () {
                       Navigator.pop(context);
                     },

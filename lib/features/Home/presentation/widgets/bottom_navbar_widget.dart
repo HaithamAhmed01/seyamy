@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:seyamy/core/utils/app_assets.dart';
 import 'package:seyamy/core/utils/app_colors.dart';
+import 'package:seyamy/core/utils/app_string.dart';
 import 'package:seyamy/core/utils/helper.dart';
 import 'package:seyamy/features/Home/presentation/manger/layout_cubit/cubit.dart';
 
@@ -46,7 +47,7 @@ class BottomNavBarWidget extends StatelessWidget {
                       Assets.iconsHome,
                       color: AppColors.labelColor,
                     ),
-              label: context.textTr("Home"),
+              label: context.textTr(AppStrings.home),
             ),
             BottomNavigationBarItem(
               icon: bottomNavCurrentIndex == 1
@@ -62,7 +63,7 @@ class BottomNavBarWidget extends StatelessWidget {
                       Assets.iconsFadl,
                       color: AppColors.labelColor,
                     ),
-              label: context.textTr("Advantages fasting"),
+              label: context.textTr(AppStrings.advantagesFasting),
             ),
             BottomNavigationBarItem(
               icon: bottomNavCurrentIndex == 2
@@ -78,7 +79,7 @@ class BottomNavBarWidget extends StatelessWidget {
                       Assets.iconsMore,
                       color: AppColors.labelColor,
                     ),
-              label: context.textTr("More"),
+              label: context.textTr(AppStrings.more),
             ),
           ],
         );

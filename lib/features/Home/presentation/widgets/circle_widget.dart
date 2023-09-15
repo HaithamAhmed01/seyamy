@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:seyamy/core/utils/app_assets.dart';
 import 'package:seyamy/core/utils/app_colors.dart';
 import 'package:seyamy/core/utils/app_fonts.dart';
+import 'package:seyamy/core/utils/app_string.dart';
 import 'package:seyamy/core/utils/helper.dart';
 
 import '../../../more/presentation/manger/theme_cubit/theme_cubit.dart';
@@ -107,7 +108,7 @@ class CircleWidget extends StatelessWidget {
               children: [
                 day != 0
                     ? Text(
-                  context.textTr("Remaining days"),
+                  context.textTr(AppStrings.remainingDays),
                         style: context.subtitle2().copyWith(
                               color: AppColors.yellow,
                             ),

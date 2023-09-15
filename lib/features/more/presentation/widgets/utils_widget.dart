@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:seyamy/core/utils/app_string.dart';
 import 'package:seyamy/core/utils/helper.dart';
 import 'package:store_redirect/store_redirect.dart';
 
@@ -27,14 +28,14 @@ class UtilsWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              context.textTr("Might Interest You"),
+              context.textTr(AppStrings.mightInterest),
               style: context.caption(),
             ),
           ),
           ListTile(
             leading: SvgPicture.asset(Assets.iconsWatch),
             title: Text(
-              context.textTr("How to Use"),
+              context.textTr(AppStrings.howToUse),
               style: context.subtitle2(),
             ),
             trailing: Icon(
@@ -47,7 +48,7 @@ class UtilsWidget extends StatelessWidget {
           ListTile(
             leading: SvgPicture.asset(Assets.iconsShare),
             title: Text(
-              context.textTr("Share the app"),
+              context.textTr(AppStrings.shareApp),
               style: context.subtitle2(),
             ),
             trailing: Icon(
@@ -62,7 +63,7 @@ class UtilsWidget extends StatelessWidget {
           ListTile(
             leading: SvgPicture.asset(Assets.iconsRate),
             title: Text(
-              context.textTr("Rate the App"),
+              context.textTr(AppStrings.rate),
               style: context.subtitle2(),
             ),
             trailing: Icon(

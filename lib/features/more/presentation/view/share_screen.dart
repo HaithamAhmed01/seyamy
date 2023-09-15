@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seyamy/core/utils/app_string.dart';
 import 'package:seyamy/core/utils/helper.dart';
 import 'package:seyamy/features/more/presentation/widgets/share_body.dart';
 
@@ -12,7 +13,7 @@ class ShareScreen extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(
         context: context,
-        text: context.textTr("Share the app"),
+        text: context.textTr(AppStrings.shareApp),
       ),
       body: const ShareBody(),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:seyamy/core/utils/app_string.dart';
 import 'package:seyamy/core/utils/helper.dart';
 
 import '../../../../config/routes/app_rout.dart';
@@ -24,7 +25,7 @@ class AdvantagesWidget extends StatelessWidget {
           ListTile(
             leading: Image.asset(Assets.iconsIcLauncher),
             title: Text(
-              context.textTr("Application Advantages"),
+              context.textTr(AppStrings.applicationAdvantages),
               style: context.subtitle2(),
             ),
             trailing: Icon(

@@ -20,7 +20,32 @@ class AppStrings {
 
   //app
   static const String appName = 'صيامي';
+  static const String question = "How many days do you want to fast?";
+  static const String silenceDay = "Silence for a day";
+  static const String congratulations = "Congratulations, you have completed your day";
+  static const String prayer = "We ask God to accept it from us and from you";
+  static const String editNumber = "Edit the number of days";
+  static const String determineNumber = "Determine the number of days you want to fast";
+  static const String remainingDays = "Remaining days";
+  static const String applicationAdvantages = "Application Advantages";
+  static const String shareApp = "Share the app";
+  static const String developer = "Developer";
+  static const String followDeveloper = "Follow Developer";
+  static const String contactAbout = "Contact Us About the App";
+  static const String remindMe = "Remind me of fasting on Mondays and Thursdays";
+  static const String remindMeContent =  "Enable it if you want to receive notifications for fasting on Mondays and Thursdays every week";
+  static const String shareContent = "Share the App and Support Us";
+  static const String version = "Version";
+  static const String darkMode = "Dark Mode";
+  static const String automatic = "Automatic";
+  static const String automaticContent = "Enable it if you want to automatically change the app's interface according to your system's mode";
+  static const String language = "Language";
+  static const String mightInterest = "Might Interest You";
+  static const String howToUse = "How to Use";
+  static const String rate = "Rate the App";
+  static const String shape = "Shape";
   static const String skip = "skip";
+  static const String add = "Add";
   static const String username = "username_hint";
   static const String password = "password_hint";
   static const String usernameError = "username_error";
@@ -31,6 +56,8 @@ class AppStrings {
   static const String loading = "loading";
   static const String retryAgain = "retry_again";
   static const String ok = "ok";
+  static const String done = "Done";
+  static const String cancel = "Cancel";
   static const String emailHint = 'email_hint';
   static const String invalidEmail = "email_error";
   static const String resetPassword = "reset_password";
@@ -44,7 +71,9 @@ class AppStrings {
   static const String profilePicture = "upload_profile_picture";
   static const String photoGallery = "photo_from_galley";
   static const String photoCamera = "photo_from_camera";
-  static const String home = "home";
+  static const String home = "Home";
+  static const String more = "More";
+  static const String advantagesFasting = "Advantages fasting";
   static const String notifications = "notification";
   static const String search = "search";
   static const String settings = "settings";

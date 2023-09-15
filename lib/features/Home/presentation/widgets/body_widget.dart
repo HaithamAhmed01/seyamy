@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:lottie/lottie.dart';
+import 'package:seyamy/core/utils/app_string.dart';
 import 'package:seyamy/core/utils/helper.dart';
 import 'package:vibration/vibration.dart';
 
@@ -37,7 +38,7 @@ class BodyWidget extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
-                  context.textTr("How many days do you want to fast?"),
+                  context.textTr(AppStrings.question),
                   style: context.subtitle1().copyWith(
                         color: AppColors.secondaryColor,
                       ),
@@ -55,7 +56,7 @@ class BodyWidget extends StatelessWidget {
                         CustomButton(
                           width: context.width * .5,
                           width2: context.width * .4,
-                          text: context.textTr("Silence for a day"),
+                          text: context.textTr(AppStrings.silenceDay),
                           onTap: () {
                             dialog(
                               context: context,
@@ -64,8 +65,7 @@ class BodyWidget extends StatelessWidget {
                                 child: Column(
                                   children: [
                                     Text(
-                                      context.textTr(
-                                          "Congratulations, you have completed your day"),
+                                      context.textTr(AppStrings.congratulations),
                                       style: context.subtitle2().copyWith(
                                             color: AppColors.secondaryColor,
                                           ),
@@ -73,8 +73,7 @@ class BodyWidget extends StatelessWidget {
                                     ),
                                     10.height,
                                     Text(
-                                      context.textTr(
-                                          "We ask God to accept it from us and from you"),
+                                      context.textTr(AppStrings.prayer),
                                       style: context.subtitle2().copyWith(
                                             color: themeCubit.them
                                                 ? AppColors.primaryColor
@@ -104,7 +103,7 @@ class BodyWidget extends StatelessWidget {
                               widget: Column(
                                 children: [
                                   Text(
-                                    context.textTr("Edit the number of days"),
+                                    context.textTr(AppStrings.editNumber),
                                     style: context.subtitle2().copyWith(
                                           color: AppColors.secondaryColor,
                                         ),
@@ -166,7 +165,7 @@ class BodyWidget extends StatelessWidget {
                   : CustomButton(
                       width: context.width * .6,
                       width2: context.width * .5,
-                      text: context.textTr("Add"),
+                      text: context.textTr(AppStrings.add),
                       icon: SvgPicture.asset(Assets.iconsAdd),
                       onTap: () {
                         dialog(
@@ -176,7 +175,7 @@ class BodyWidget extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 20),
                                 child: Text(
-                                  context.textTr("Determine the number of days you want to fast"),
+                                  context.textTr(AppStrings.determineNumber),
                                   style: context.subtitle2().copyWith(
                                         color: AppColors.secondaryColor,
                                       ),

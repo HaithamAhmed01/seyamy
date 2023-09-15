@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:seyamy/core/utils/app_string.dart';
 import 'package:seyamy/core/utils/helper.dart';
 import 'package:seyamy/features/more/presentation/widgets/container_widget.dart';
 
@@ -43,7 +44,7 @@ class _TranslateWidgetState extends State<TranslateWidget> {
                 Icons.translate,
               ),
               title: Text(
-                context.textTr("Language"),
+                context.textTr(AppStrings.language),
                 style: context.subtitle2(),
               ),
             ),
