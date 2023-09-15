@@ -55,7 +55,7 @@ class AppStrings {
   static const String registerText = "register_text";
   static const String loading = "loading";
   static const String retryAgain = "retry_again";
-  static const String ok = "ok";
+  static const String ok = "Ok";
   static const String done = "Done";
   static const String cancel = "Cancel";
   static const String emailHint = 'email_hint';

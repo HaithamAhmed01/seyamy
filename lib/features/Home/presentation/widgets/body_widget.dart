@@ -49,7 +49,7 @@ class BodyWidget extends StatelessWidget {
                 child: CircleWidget(day: cubit.day),
               ),
               15.height,
-              cubit.day != 0
+              cubit.day != 0 || cubit.day > 0
                   ? Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -61,11 +61,13 @@ class BodyWidget extends StatelessWidget {
                             dialog(
                               context: context,
                               widget: Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
                                 child: Column(
                                   children: [
                                     Text(
-                                      context.textTr(AppStrings.congratulations),
+                                      context
+                                          .textTr(AppStrings.congratulations),
                                       style: context.subtitle2().copyWith(
                                             color: AppColors.secondaryColor,
                                           ),
@@ -173,7 +175,8 @@ class BodyWidget extends StatelessWidget {
                           widget: Column(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
                                 child: Text(
                                   context.textTr(AppStrings.determineNumber),
                                   style: context.subtitle2().copyWith(

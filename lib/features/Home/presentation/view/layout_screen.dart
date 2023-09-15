@@ -91,7 +91,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
                     CustomButton(
                       width: context.width * .3,
                       width2: context.width * .2,
-                      text: context.textTr("Ok"),
+                      text: context.textTr(AppStrings.ok),
                       onTap: () {
                         Navigator.of(context).pop(true);
                       },
@@ -103,7 +103,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
                       color: themeCubit.them
                           ? AppColors.subLightColor
                           : AppColors.whiteColor,
-                      text: context.textTr("Cancel"),
+                      text: context.textTr(AppStrings.cancel),
                       onTap: () {
                         Navigator.of(context).pop(false);
                       },
