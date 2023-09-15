@@ -63,7 +63,7 @@ class AppStrings {
   static const String appLink =
       'https://play.google.com/store/apps/details?id=com.seyamy.seyamy';
   static const String mailLink =
-      'mailto:?subject= &body= ';
+      'mailto:haithamahmed0000@gmail.com?subject=Seyamy App&body=';
   static const String whatsappLink =
       'https://api.whatsapp.com/send?text=$text&url=$appLink';
   static const String telegramLink =

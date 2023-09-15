@@ -3,24 +3,28 @@ import 'package:lottie/lottie.dart';
 import 'package:seyamy/core/utils/app_assets.dart';
 import 'package:seyamy/core/utils/helper.dart';
 
-import 'expandable_widget.dart';
+import 'fadl_list.dart';
 
 class FadlAlseyamBody extends StatelessWidget {
   const FadlAlseyamBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        20.height,
-        AspectRatio(
-          aspectRatio: 1 / .4,
-          child: Lottie.asset(Assets.animationFADL),
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: 20.height,
         ),
-        22.height,
-        const Expanded(
-          child: ExpandableWidget(),
+        SliverToBoxAdapter(
+          child: AspectRatio(
+            aspectRatio: 1 / .4,
+            child: Lottie.asset(Assets.animationFADL),
+          ),
         ),
+        SliverToBoxAdapter(
+          child: 22.height,
+        ),
+        const FadlList(),
       ],
     );
   }

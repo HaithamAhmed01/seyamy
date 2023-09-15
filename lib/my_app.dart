@@ -58,7 +58,7 @@ class StartApp extends StatelessWidget {
           return BlocBuilder<ThemeCubit, AppTheme>(
             builder: (context, state) {
               return MaterialApp.router(
-                locale: context.locale,
+                locale: DevicePreview.locale(context),
                 builder: DevicePreview.appBuilder,
                 debugShowCheckedModeBanner: false,
                 supportedLocales: AppLocalizationsSetup.supportedLocales,

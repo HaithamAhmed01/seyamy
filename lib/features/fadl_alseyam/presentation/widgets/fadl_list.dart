@@ -8,22 +8,22 @@ import '../../../more/presentation/manger/theme_cubit/theme_cubit.dart';
 import '../../../more/presentation/widgets/container_widget.dart';
 import '../../data/model/ExpandableContent.dart';
 
-class ExpandableWidget extends StatefulWidget {
-  const ExpandableWidget({
+class FadlList extends StatefulWidget {
+  const FadlList({
     super.key,
   });
 
   @override
-  State<ExpandableWidget> createState() => _ExpandableWidgetState();
+  State<FadlList> createState() => _FadlListState();
 }
 
-class _ExpandableWidgetState extends State<ExpandableWidget> {
+class _FadlListState extends State<FadlList> {
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: dataExpandable.length,
-      itemBuilder: (context, index) {
-        return BlocBuilder<ThemeCubit, AppTheme>(
+    return SliverList(
+      delegate: SliverChildBuilderDelegate(
+        childCount: dataExpandable.length,
+        (context, index) => BlocBuilder<ThemeCubit, AppTheme>(
           builder: (context, state) {
             return Padding(
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
@@ -51,8 +51,8 @@ class _ExpandableWidgetState extends State<ExpandableWidget> {
               ),
             );
           },
-        );
-      },
+        ),
+      ),
     );
   }
 }

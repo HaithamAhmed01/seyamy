@@ -64,12 +64,12 @@ class _SplashScreenState extends State<SplashScreen> {
             if (isOnBoardingScreenViewed)
               {
                 // navigate to layoutScreen
-                context.pushReplacement(AppRouts.layoutScreen)
+                context.push(AppRouts.layoutScreen)
               }
             else
               {
                 // navigate to onBoarding screen
-                context.pushReplacement(AppRouts.onBoardingScreen)
+                context.push(AppRouts.onBoardingScreen)
               },
           },
         );
