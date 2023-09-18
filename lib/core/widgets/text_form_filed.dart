@@ -76,6 +76,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         AutofillHints.addressCity,
       ],
       style: Theme.of(context).textTheme.labelSmall,
+      onTapOutside: (event) => FocusManager.instance.primaryFocus?.unfocus(),
       // style: context.bodyText2(),
       decoration: InputDecoration(
         hintText: widget.hint,
