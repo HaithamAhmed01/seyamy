@@ -1,5 +1,4 @@
 import 'package:awesome_notifications/awesome_notifications.dart';
-import 'package:flutter/material.dart';
 import 'package:seyamy/core/utils/app_colors.dart';
 
 class NotificationController {
@@ -48,9 +47,9 @@ class NotificationController {
         ],
         channelGroups: [
           NotificationChannelGroup(
-              channelGroupkey: 'basic_channel', channelGroupName: 'Reminders'),
+              channelGroupKey: 'basic_channel', channelGroupName: 'Reminders'),
           NotificationChannelGroup(
-              channelGroupkey: 'alert_channel', channelGroupName: 'Alerts'),
+              channelGroupKey: 'alert_channel', channelGroupName: 'Alerts'),
         ],
         debug: false);
   }

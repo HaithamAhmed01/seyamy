@@ -25,7 +25,8 @@ dependencies:
   easy_localization: ^3.0.2
   
   # NOTIFICATION
-  awesome_notifications: ^0.6.19
+#  awesome_notifications: ^0.6.19 #ios
+  awesome_notifications: ^0.7.4+1 #andriod
   
   # Configuration and utilities
   flutter_native_splash: ^2.2.19
