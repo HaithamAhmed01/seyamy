@@ -1,6 +1,4 @@
-**README.md**
-
-**Seyamy**
+# Seyamy
 
 **A new Flutter project.**
 
