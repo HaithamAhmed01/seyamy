@@ -14,7 +14,7 @@ This is a new Flutter project that you can use as a starting point for your own 
 * State management and dependency injection: flutter_bloc, dartz, get_it, equatable
 * Routing and navigation: go_router
 
-**Getting started**
+## Getting Started
 
 To get started, clone this repository and run the following command:
 
