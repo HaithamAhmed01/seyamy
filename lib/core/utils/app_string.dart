@@ -94,11 +94,11 @@ class AppStrings {
   static const String mailLink =
       'mailto:haithamahmed0000@gmail.com?subject=Seyamy App&body=';
   static const String whatsappLink =
-      'https://api.whatsapp.com/send?text=$text&url=$appLink';
+      'https://api.whatsapp.com/send?text=$text \n$appLink';
   static const String telegramLink =
-      'https://t.me/share/url?text=$text&url=$appLink';
+      'https://t.me/share/url?text=$text \n$appLink';
   static const String facebookLink =
-      'https://www.facebook.com/sharer/sharer.php?t=$text&u=$appLink';
+      'https://www.facebook.com/sharer/sharer.php?t=$text \n$appLink';
   static const String linkedInLink =
       'https://www.linkedin.com/in/haitham-ahmed-a4626a19b/';
 

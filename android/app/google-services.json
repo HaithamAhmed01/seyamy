@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "260064353271",
+    "project_id": "seyamy-ff899",
+    "storage_bucket": "seyamy-ff899.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260064353271:android:244762c33a290032d16cf2",
+        "android_client_info": {
+          "package_name": "com.seyamy.seyamy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClh2nbwfyRbEhBIaGCJeCk26yiIuiej2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
