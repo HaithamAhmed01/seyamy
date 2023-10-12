@@ -40,10 +40,9 @@ class StartApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (BuildContext context) => ThemeCubit(
-            preferences: sl.get<SharedPreferences>(),
-          ),
-        ),
+            create: (BuildContext context) => ThemeCubit(
+                  preferences: sl.get<SharedPreferences>(),
+                )),
         BlocProvider(create: (BuildContext context) => LayoutCubit()),
         BlocProvider(
           create: (BuildContext context) => HomeCubit()
