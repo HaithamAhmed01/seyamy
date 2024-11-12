@@ -10,48 +10,49 @@ class NotificationController {
   ///
   static Future<void> initializeLocalNotifications() async {
     await AwesomeNotifications().initialize(
-        'resource://drawable/res_app_icon',
-        [
-          NotificationChannel(
-            channelKey: 'basic_channel',
-            channelName: 'Reminders',
-            channelGroupKey: 'basic_channel',
-            groupKey: 'basic_channel',
-            enableVibration: true,
-            channelDescription: 'Notification',
-            playSound: true,
-            onlyAlertOnce: true,
-            soundSource: 'resource://raw/res_alert',
-            groupAlertBehavior: GroupAlertBehavior.Children,
-            importance: NotificationImportance.High,
-            defaultPrivacy: NotificationPrivacy.Public,
-            defaultColor: AppColors.primaryColor,
-            ledColor: AppColors.primaryColor,
-          ),
-          NotificationChannel(
-            channelKey: 'alert_channel',
-            channelName: 'Alerts',
-            channelGroupKey: 'alert_channel',
-            groupKey: 'alert_channel',
-            enableVibration: true,
-            channelDescription: 'Alerts Notification',
-            playSound: true,
-            onlyAlertOnce: true,
-            soundSource: 'resource://raw/res_notifications',
-            groupAlertBehavior: GroupAlertBehavior.Children,
-            importance: NotificationImportance.High,
-            defaultPrivacy: NotificationPrivacy.Public,
-            defaultColor: AppColors.primaryColor,
-            ledColor: AppColors.primaryColor,
-          ),
-        ],
-        channelGroups: [
-          NotificationChannelGroup(
-              channelGroupKey: 'basic_channel', channelGroupName: 'Reminders'),
-          NotificationChannelGroup(
-              channelGroupKey: 'alert_channel', channelGroupName: 'Alerts'),
-        ],
-        debug: false);
+      'resource://drawable/res_app_icon',
+      [
+        NotificationChannel(
+          channelKey: 'basic_channel',
+          channelName: 'Reminders',
+          channelGroupKey: 'basic_channel',
+          groupKey: 'basic_channel',
+          enableVibration: true,
+          channelDescription: 'Notification',
+          playSound: true,
+          onlyAlertOnce: true,
+          soundSource: 'resource://raw/res_alert',
+          groupAlertBehavior: GroupAlertBehavior.Children,
+          importance: NotificationImportance.High,
+          defaultPrivacy: NotificationPrivacy.Public,
+          defaultColor: AppColors.primaryColor,
+          ledColor: AppColors.primaryColor,
+        ),
+        NotificationChannel(
+          channelKey: 'alert_channel',
+          channelName: 'Alerts',
+          channelGroupKey: 'alert_channel',
+          groupKey: 'alert_channel',
+          enableVibration: true,
+          channelDescription: 'Alerts Notification',
+          playSound: true,
+          onlyAlertOnce: true,
+          soundSource: 'resource://raw/res_notifications',
+          groupAlertBehavior: GroupAlertBehavior.Children,
+          importance: NotificationImportance.High,
+          defaultPrivacy: NotificationPrivacy.Public,
+          defaultColor: AppColors.primaryColor,
+          ledColor: AppColors.primaryColor,
+        ),
+      ],
+      channelGroups: [
+        NotificationChannelGroup(
+            channelGroupKey: 'basic_channel', channelGroupName: 'Reminders'),
+        NotificationChannelGroup(
+            channelGroupKey: 'alert_channel', channelGroupName: 'Alerts'),
+      ],
+      debug: false,
+    );
   }
 
   ///  *********************************************
@@ -81,5 +82,9 @@ class NotificationController {
     await AwesomeNotifications().cancel(4);
     await AwesomeNotifications().cancel(5);
     await AwesomeNotifications().cancel(6);
+  }
+  static Future<void> cancelWhiteDayScheduledNotifications() async {
+    await AwesomeNotifications().cancel(7);
+    await AwesomeNotifications().cancel(8);
   }
 }

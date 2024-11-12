@@ -35,4 +35,8 @@ List<ExpandableContent> dataExpandable = [
     header: "Fadl_header6",
     body: "Fadl_body6",
   ),
+  ExpandableContent(
+    header: "Fadl_header7",
+    body: "Fadl_body7",
+  ),
 ];

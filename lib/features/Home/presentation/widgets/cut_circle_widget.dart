@@ -35,7 +35,7 @@ class QuarterCirclePainter extends CustomPainter {
 }
 
 class CutCircle extends StatelessWidget {
-  const CutCircle({Key? key}) : super(key: key);
+  const CutCircle({super.key});
 
   @override
   Widget build(BuildContext context) {

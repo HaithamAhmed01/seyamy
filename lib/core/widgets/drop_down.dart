@@ -46,7 +46,7 @@ class _SimpleDropDownState<T> extends State<SimpleDropDown<T>> {
             onChanged: widget.onChanged,
             validator: widget.validator,
             onSaved: widget.onSaved,
-            style: Theme.of(context).textTheme.headline5,
+            style: Theme.of(context).textTheme.bodyMedium,
             icon:
                 Icon(Icons.arrow_drop_down, size: 24, color: Colors.grey[400]),
             selectedItemBuilder: (context) => widget.list.map(

@@ -66,7 +66,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 children: [
                   Text(
                     'Developed By',
-                    style: context.subtitle1().copyWith(
+                    style: context.titleLarge().copyWith(
                           fontSize: 9.sp,
                           color: AppColors.bottomColor,
                         ),
@@ -74,7 +74,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                   Text(
                     'Haitham Ahmed',
-                    style: context.subtitle1().copyWith(
+                    style: context.titleLarge().copyWith(
                           fontSize: 15.sp,
                           color: AppColors.bottomColor,
                         ),

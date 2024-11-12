@@ -1,24 +1,26 @@
 PODS:
-  - awesome_notifications (0.8.1):
+  - awesome_notifications (0.10.0):
     - Flutter
-    - IosAwnCore (~> 0.8.0)
+    - IosAwnCore (~> 0.10.0)
   - connectivity_plus (0.0.1):
     - Flutter
-    - ReachabilitySwift
+    - FlutterMacOS
   - device_info_plus (0.0.1):
     - Flutter
   - Flutter (1.0.0)
   - flutter_native_splash (0.0.1):
     - Flutter
-  - flutter_share (0.0.1):
-    - Flutter
-  - IosAwnCore (0.8.0)
+  - IosAwnCore (0.10.0)
   - network_info_plus (0.0.1):
     - Flutter
   - package_info_plus (0.4.5):
     - Flutter
-  - ReachabilitySwift (5.0.0)
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
   - rive_common (0.0.1):
+    - Flutter
+  - share_plus (0.0.1):
     - Flutter
   - shared_preferences_foundation (0.0.1):
     - Flutter
@@ -32,14 +34,15 @@ PODS:
 
 DEPENDENCIES:
   - awesome_notifications (from `.symlinks/plugins/awesome_notifications/ios`)
-  - connectivity_plus (from `.symlinks/plugins/connectivity_plus/ios`)
+  - connectivity_plus (from `.symlinks/plugins/connectivity_plus/darwin`)
   - device_info_plus (from `.symlinks/plugins/device_info_plus/ios`)
   - Flutter (from `Flutter`)
   - flutter_native_splash (from `.symlinks/plugins/flutter_native_splash/ios`)
-  - flutter_share (from `.symlinks/plugins/flutter_share/ios`)
   - network_info_plus (from `.symlinks/plugins/network_info_plus/ios`)
   - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - rive_common (from `.symlinks/plugins/rive_common/ios`)
+  - share_plus (from `.symlinks/plugins/share_plus/ios`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
   - store_redirect (from `.symlinks/plugins/store_redirect/ios`)
   - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
@@ -48,27 +51,28 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - IosAwnCore
-    - ReachabilitySwift
 
 EXTERNAL SOURCES:
   awesome_notifications:
     :path: ".symlinks/plugins/awesome_notifications/ios"
   connectivity_plus:
-    :path: ".symlinks/plugins/connectivity_plus/ios"
+    :path: ".symlinks/plugins/connectivity_plus/darwin"
   device_info_plus:
     :path: ".symlinks/plugins/device_info_plus/ios"
   Flutter:
     :path: Flutter
   flutter_native_splash:
     :path: ".symlinks/plugins/flutter_native_splash/ios"
-  flutter_share:
-    :path: ".symlinks/plugins/flutter_share/ios"
   network_info_plus:
     :path: ".symlinks/plugins/network_info_plus/ios"
   package_info_plus:
     :path: ".symlinks/plugins/package_info_plus/ios"
+  path_provider_foundation:
+    :path: ".symlinks/plugins/path_provider_foundation/darwin"
   rive_common:
     :path: ".symlinks/plugins/rive_common/ios"
+  share_plus:
+    :path: ".symlinks/plugins/share_plus/ios"
   shared_preferences_foundation:
     :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
   store_redirect:
@@ -79,22 +83,22 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/vibration/ios"
 
 SPEC CHECKSUMS:
-  awesome_notifications: db394d2e061e4583ba0f738ddea611e3986cc3fb
-  connectivity_plus: 413a8857dd5d9f1c399a39130850d02fe0feaf7e
-  device_info_plus: 7545d84d8d1b896cb16a4ff98c19f07ec4b298ea
-  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
-  flutter_native_splash: 52501b97d1c0a5f898d687f1646226c1f93c56ef
-  flutter_share: 4be0208963c60b537e6255ed2ce1faae61cd9ac2
-  IosAwnCore: ed1b2b6d84962a758354dbacd9ce525c72ce28a9
-  network_info_plus: b78876159360f5580608c2cea620d6ceffabd0ad
-  package_info_plus: fd030dabf36271f146f1f3beacd48f564b0f17f7
-  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
-  rive_common: 60ae7896ab40f9513974f36f015de33f70d2c5c5
-  shared_preferences_foundation: e2dae3258e06f44cc55f49d42024fd8dd03c590c
+  awesome_notifications: dd5518ff1c80be03d4f1c40f04da9d9cc2a37af5
+  connectivity_plus: 4c41c08fc6d7c91f63bc7aec70ffe3730b04f563
+  device_info_plus: bf2e3232933866d73fe290f2942f2156cdd10342
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  flutter_native_splash: edf599c81f74d093a4daf8e17bd7a018854bc778
+  IosAwnCore: 653786a911089012092ce831f2945cd339855a89
+  network_info_plus: 9d930145451916919786087c4173226363616071
+  package_info_plus: c0502532a26c7662a62a356cebe2692ec5fe4ec4
+  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
+  rive_common: cbbac3192af00d7341f19dae2f26298e9e37d99e
+  share_plus: 8b6f8b3447e494cca5317c8c3073de39b3600d1f
+  shared_preferences_foundation: fcdcbc04712aee1108ac7fda236f363274528f78
   store_redirect: 2977747cf81689a39bd62c248c2deacb7a0d131e
-  url_launcher_ios: 08a3dfac5fb39e8759aeb0abbd5d9480f30fc8b4
+  url_launcher_ios: 5334b05cef931de560670eeae103fd3e431ac3fe
   vibration: 7d883d141656a1c1a6d8d238616b2042a51a1241
 
-PODFILE CHECKSUM: 6b9eb94e9f98a329f2ef624b852a6e42d090af2b
+PODFILE CHECKSUM: 7ede95a02ba482a22616fa3535fbe898bfb45d44
 
-COCOAPODS: 1.13.0
+COCOAPODS: 1.15.2

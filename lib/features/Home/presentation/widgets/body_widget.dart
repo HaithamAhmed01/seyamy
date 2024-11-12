@@ -1,6 +1,5 @@
 import 'package:confetti/confetti.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:lottie/lottie.dart';
@@ -39,7 +38,7 @@ class BodyWidget extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
                   context.textTr(AppStrings.question),
-                  style: context.subtitle1().copyWith(
+                  style: context.titleLarge().copyWith(
                         color: AppColors.secondaryColor,
                       ),
                 ),
@@ -68,7 +67,7 @@ class BodyWidget extends StatelessWidget {
                                     Text(
                                       context
                                           .textTr(AppStrings.congratulations),
-                                      style: context.subtitle2().copyWith(
+                                      style: context.titleMedium().copyWith(
                                             color: AppColors.secondaryColor,
                                           ),
                                       textAlign: TextAlign.center,
@@ -76,7 +75,7 @@ class BodyWidget extends StatelessWidget {
                                     10.height,
                                     Text(
                                       context.textTr(AppStrings.prayer),
-                                      style: context.subtitle2().copyWith(
+                                      style: context.titleMedium().copyWith(
                                             color: themeCubit.them
                                                 ? AppColors.primaryColor
                                                 : AppColors.subDarkColor,
@@ -88,8 +87,12 @@ class BodyWidget extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              onPressed: () {
+                              onPressedDone: () {
                                 _confettiController.play();
+                                Navigator.pop(context);
+                              },
+                              onPressedCancel: () {
+                                cubit.selectNumber(0);
                                 Navigator.pop(context);
                               },
                             );
@@ -106,7 +109,7 @@ class BodyWidget extends StatelessWidget {
                                 children: [
                                   Text(
                                     context.textTr(AppStrings.editNumber),
-                                    style: context.subtitle2().copyWith(
+                                    style: context.titleMedium().copyWith(
                                           color: AppColors.secondaryColor,
                                         ),
                                   ),
@@ -117,7 +120,7 @@ class BodyWidget extends StatelessWidget {
                                       onSelectedItemChanged: (int index) {
                                         cubit.selectNumber(index);
                                       },
-                                      children: List<Widget>.generate(31,
+                                      children: List<Widget>.generate(366,
                                           (int index) {
                                         return Center(
                                           child: Text(
@@ -138,8 +141,12 @@ class BodyWidget extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              onPressed: () {
+                              onPressedDone: () {
                                 cubit.addNumber();
+                                Navigator.pop(context);
+                              },
+                              onPressedCancel: () {
+                                cubit.selectNumber(0);
                                 Navigator.pop(context);
                               },
                             );
@@ -179,7 +186,7 @@ class BodyWidget extends StatelessWidget {
                                     const EdgeInsets.symmetric(horizontal: 20),
                                 child: Text(
                                   context.textTr(AppStrings.determineNumber),
-                                  style: context.subtitle2().copyWith(
+                                  style: context.titleMedium().copyWith(
                                         color: AppColors.secondaryColor,
                                       ),
                                   textAlign: TextAlign.center,
@@ -193,7 +200,7 @@ class BodyWidget extends StatelessWidget {
                                     cubit.selectNumber(index);
                                   },
                                   children:
-                                      List<Widget>.generate(31, (int index) {
+                                      List<Widget>.generate(366, (int index) {
                                     return Center(
                                       child: Text(
                                         '$index',
@@ -213,8 +220,12 @@ class BodyWidget extends StatelessWidget {
                               ),
                             ],
                           ),
-                          onPressed: () {
+                          onPressedDone: () {
                             cubit.addNumber();
+                            Navigator.pop(context);
+                          },
+                          onPressedCancel: () {
+                            cubit.selectNumber(0);
                             Navigator.pop(context);
                           },
                         );

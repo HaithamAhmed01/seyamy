@@ -8,10 +8,12 @@ import '../../../../core/widgets/custom_button.dart';
 import '../../../../core/widgets/custom_outline_buttom.dart';
 import '../../../more/presentation/manger/theme_cubit/theme_cubit.dart';
 
-void dialog(
-    {required BuildContext context,
-      required Widget widget,
-      required VoidCallback onPressed}) {
+void dialog({
+  required BuildContext context,
+  required Widget widget,
+  required VoidCallback onPressedDone,
+  required VoidCallback onPressedCancel,
+}) {
   final themeCubit = BlocProvider.of<ThemeCubit>(context);
   showDialog(
     context: context,
@@ -41,7 +43,7 @@ void dialog(
                     width: context.width * .3,
                     width2: context.width * .2,
                     text: context.textTr(AppStrings.done),
-                    onTap: onPressed,
+                    onTap: onPressedDone,
                   ),
                   16.width,
                   CustomOutlineButton(
@@ -51,9 +53,7 @@ void dialog(
                         ? AppColors.subLightColor
                         : AppColors.whiteColor,
                     text: context.textTr(AppStrings.cancel),
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
+                    onTap: onPressedCancel,
                   ),
                 ],
               )

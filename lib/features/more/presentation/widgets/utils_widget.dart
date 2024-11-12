@@ -9,9 +9,9 @@ import 'package:store_redirect/store_redirect.dart';
 import '../../../../config/routes/app_rout.dart';
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_values.dart';
 import '../manger/theme_cubit/theme_cubit.dart';
 import 'container_widget.dart';
-
 
 class UtilsWidget extends StatelessWidget {
   const UtilsWidget({
@@ -22,21 +22,26 @@ class UtilsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final themeCubit = BlocProvider.of<ThemeCubit>(context);
     return ContainerWidget(
-      body: Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.symmetric(
+              horizontal: AppPadding.p16,
+              vertical: AppPadding.p8,
+            ),
             child: Text(
               context.textTr(AppStrings.mightInterest),
-              style: context.caption(),
+              style: context.titleMedium().copyWith(
+                color: AppColors.labelColor,
+              ),
             ),
           ),
           ListTile(
             leading: SvgPicture.asset(Assets.iconsWatch),
             title: Text(
               context.textTr(AppStrings.howToUse),
-              style: context.subtitle2(),
+              style: context.titleMedium(),
             ),
             trailing: Icon(
               Icons.arrow_forward_ios,
@@ -49,7 +54,7 @@ class UtilsWidget extends StatelessWidget {
             leading: SvgPicture.asset(Assets.iconsShare),
             title: Text(
               context.textTr(AppStrings.shareApp),
-              style: context.subtitle2(),
+              style: context.titleMedium(),
             ),
             trailing: Icon(
               Icons.arrow_forward_ios,
@@ -64,7 +69,7 @@ class UtilsWidget extends StatelessWidget {
             leading: SvgPicture.asset(Assets.iconsRate),
             title: Text(
               context.textTr(AppStrings.rate),
-              style: context.subtitle2(),
+              style: context.titleMedium(),
             ),
             trailing: Icon(
               Icons.arrow_forward_ios,

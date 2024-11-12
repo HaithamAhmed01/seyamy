@@ -18,11 +18,11 @@ class ShareItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ContainerWidget(
-      body: ListTile(
+      child: ListTile(
         leading: icon,
         title: Text(
           text,
-          style: context.subtitle2(),
+          style: context.titleMedium(),
         ),
         onTap: onTab,
       ),

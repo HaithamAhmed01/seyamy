@@ -21,7 +21,7 @@ AppBar buildAppBar({
     titleSpacing: 0,
     title: Text(
       text,
-      style: context.subtitle2(),
+      style: context.titleMedium(),
     ),
     centerTitle: false,
   );

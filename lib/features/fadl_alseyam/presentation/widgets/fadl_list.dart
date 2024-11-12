@@ -28,20 +28,20 @@ class _FadlListState extends State<FadlList> {
             return Padding(
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
               child: ContainerWidget(
-                body: Theme(
+                child: Theme(
                   data: Theme.of(context)
                       .copyWith(dividerColor: Colors.transparent),
                   child: ExpansionTile(
                     maintainState: false,
                     title: Text(
                       context.textTr(dataExpandable[index].header),
-                      style: context.subtitle2(),
+                      style: context.titleMedium(),
                     ),
                     children: [
                       ListTile(
                         title: Text(
                           context.textTr(dataExpandable[index].body),
-                          style: context.bodyText2(),
+                          style: context.bodyMedium(),
                           textAlign: TextAlign.start,
                         ),
                       ),

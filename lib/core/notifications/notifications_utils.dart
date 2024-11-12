@@ -1,5 +1,8 @@
 import 'dart:async';
+import 'dart:developer';
 import 'package:awesome_notifications/awesome_notifications.dart';
+import 'package:jhijri/_src/_jHijri.dart';
+import 'package:jhijri/jHijri.dart';
 
 /* *********************************************
     PERMISSIONS
@@ -159,7 +162,7 @@ class NotificationUtils {
         repeats: true,
         hour: 21,
         // 9 PM
-        minute: 13,
+        minute: 0,
         second: 0,
       ),
     );
@@ -192,10 +195,116 @@ class NotificationUtils {
     );
   }
 
+  // 12            9pm <== 21
+  // 13   2 am and 9pm <== 21
+  // 14   2 am and 9pm <== 21
+  // 15   2 am
+
+  static Future<void> showAlarmNotificationWhiteDayScheduled() async {
+    // Get the current Hijri date
+    final dateTimesHijri = getAllDatesForHijri(hijriDays: [12, 13, 14]);
+    final dateTimesHijri2 = getAllDatesForHijri(hijriDays: [13, 14, 15]);
+    // print(dateTimesHijri);
+    // Schedule the notification
+    for (DateTime gregorianDay in dateTimesHijri) {
+      log('gregorian day $gregorianDay');
+      await AwesomeNotifications().createNotification(
+        content: NotificationContent(
+          id: 7,
+          channelKey: 'basic_channel',
+          groupKey: 'basic_channel',
+          title: 'نذكرك بصيام الأيام البيض',
+          body: 'فعنْ أَبي ذَرٍّ ، قَالَ: قالَ رسولُ اللَّهِ ﷺ: إِذا صُمْتَ مِنَ الشَّهْرِ ثَلاثًا، فَصُمْ ثَلاثَ عَشْرَةَ، وَأَرْبعَ عَشْرَةَ، وخَمْسَ عَشْرَةَ رواه الترمِذيُّ وقال: حديثٌ حسنٌ.',
+          showWhen: true,
+          wakeUpScreen: true,
+          displayOnBackground: true,
+          displayOnForeground: true,
+          category: NotificationCategory.Reminder,
+          notificationLayout: NotificationLayout.BigText,
+        ),
+        schedule: NotificationCalendar(
+          year: gregorianDay.year,
+          month: gregorianDay.month,
+          day: gregorianDay.day,
+          preciseAlarm: true,
+          allowWhileIdle: true,
+          hour: 21,
+          // 9 PM
+          minute: 0,
+          second: 0,
+          // hour: 15,
+          // // 9 PM
+          // minute: 29,
+          // second: 0,
+        ),
+      );
+    }
+
+    for (DateTime gregorianDay in dateTimesHijri2) {
+      log('gregorian day2 $gregorianDay');
+      await AwesomeNotifications().createNotification(
+        content: NotificationContent(
+          id: 8,
+          channelKey: 'basic_channel',
+          groupKey: 'basic_channel',
+          title: "اقترب الفجر، استعد للسحور",
+          body: "تجنب الصيام جافًا وتناول وجبة سحور صحية ومغذية",
+          showWhen: true,
+          wakeUpScreen: true,
+          displayOnBackground: true,
+          displayOnForeground: true,
+          category: NotificationCategory.Reminder,
+          notificationLayout: NotificationLayout.BigText,
+        ),
+        schedule: NotificationCalendar(
+          year: gregorianDay.year,
+          month: gregorianDay.month,
+          day: gregorianDay.day,
+          preciseAlarm: true,
+          allowWhileIdle: true,
+          hour: 2,
+          // 2 AM
+          minute: 0,
+          second: 0,
+        ),
+      );
+    }
+  }
+
+  static List<DateTime> getAllDatesForHijri({required List<int> hijriDays}) {
+    final dates = <DateTime>[];
+    final now = DateTime.now();
+
+    // Get the current Hijri year
+    final hijriNow = JHijri(fDate: now);
+    final currentHijriYear = hijriNow.year;
+
+    // List of target days
+
+    // Iterate over all 12 months
+    for (var month = 1; month <= 24; month++) {
+      for (final day in hijriDays) {
+        // Create a new Hijri date
+        final hijriDate = JHijri()
+          ..fYear = currentHijriYear
+          ..fMonth = month
+          ..fDay = day;
+
+        // Convert Hijri date to Gregorian date
+        final gregorianDate = hijriDate.dateTime;
+
+        // Check if the date is valid and add debugging output
+        dates.add(gregorianDate);
+      }
+    }
+
+    return dates;
+  }
+
   static Future<void> showAlarmNotificationProphet() async {
     await AwesomeNotifications().createNotification(
       content: NotificationContent(
-        id: 10,
+        id: 7,
         channelKey: 'basic_channel',
         groupKey: 'basic_channel',
         title: 'صّلِ عَلۓِ مُحَمد',
@@ -219,7 +328,7 @@ class NotificationUtils {
 
     await AwesomeNotifications().createNotification(
       content: NotificationContent(
-        id: 11,
+        id: 8,
         channelKey: 'basic_channel',
         groupKey: 'basic_channel',
         title: 'صّلِ عَلۓِ مُحَمد',
@@ -245,7 +354,7 @@ class NotificationUtils {
   static Future<void> showAlarmNotificationCompletePray() async {
     await AwesomeNotifications().createNotification(
       content: NotificationContent(
-        id: 12,
+        id: 9,
         channelKey: 'basic_channel',
         groupKey: 'basic_channel',
         title: 'الصلاة',

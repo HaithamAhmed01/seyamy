@@ -11,7 +11,6 @@ import 'package:seyamy/features/Home/presentation/manger/layout_cubit/cubit.dart
 import 'package:seyamy/features/Home/presentation/manger/layout_cubit/state.dart';
 import 'package:seyamy/features/Home/presentation/widgets/appbar_widget.dart';
 import 'package:seyamy/features/Home/presentation/widgets/bottom_navbar_widget.dart';
-import 'package:upgrader/upgrader.dart';
 
 import '../../../../core/utils/app_assets.dart';
 import '../../../more/presentation/manger/theme_cubit/theme_cubit.dart';
@@ -33,18 +32,15 @@ class _LayoutScreenState extends State<LayoutScreen> {
         var bottomNavCurrentIndex = cubit.bottomNavCurrentIndex;
         return WillPopScope(
           onWillPop: dialogExit,
-          child: UpgradeAlert(
-            upgrader: Upgrader(showIgnore: false, messages: UpgraderMessages()),
-            child: Scaffold(
-              appBar: buildAppBar(
-                context.textTr(cubit.itemsTabBar[bottomNavCurrentIndex]),
-                context,
-              ),
-              bottomNavigationBar: BottomNavBarWidget(cubit: cubit),
-              body: IndexedStack(
-                index: bottomNavCurrentIndex,
-                children: cubit.bottomScreens,
-              ),
+          child: Scaffold(
+            appBar: buildAppBar(
+              context.textTr(cubit.itemsTabBar[bottomNavCurrentIndex]),
+              context,
+            ),
+            bottomNavigationBar: BottomNavBarWidget(cubit: cubit),
+            body: IndexedStack(
+              index: bottomNavCurrentIndex,
+              children: cubit.bottomScreens,
             ),
           ),
         );
@@ -77,7 +73,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Text(
                     context.textTr(AppStrings.youWantToExit),
-                    style: context.subtitle2().copyWith(fontSize: 15.sp),
+                    style: context.titleMedium().copyWith(fontSize: 15.sp),
                   ),
                 ),
                 AspectRatio(

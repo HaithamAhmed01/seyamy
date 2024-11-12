@@ -107,7 +107,7 @@ class CircleWidget extends StatelessWidget {
               day != 0 || day > 0
                   ? Text(
                 context.textTr(AppStrings.remainingDays),
-                      style: context.subtitle2().copyWith(
+                      style: context.titleMedium().copyWith(
                             color: AppColors.yellow,
                           ),
                     )

@@ -11,11 +11,6 @@ ThemeData dark = ThemeData(
   primaryColor: AppColors.primaryColor,
   useMaterial3: true,
   scaffoldBackgroundColor: AppColors.backgroundDarkColor,
-  textButtonTheme: TextButtonThemeData(
-    style: TextButton.styleFrom(
-      primary: AppColors.bottomColor,
-    ),
-  ),
   appBarTheme: AppBarTheme(
     titleSpacing: 20.0,
     backgroundColor: AppColors.backgroundDarkColor,
@@ -40,32 +35,32 @@ ThemeData dark = ThemeData(
     ),
   ),
   textTheme: TextTheme(
-    subtitle1: TextStyle(
+    titleLarge: TextStyle(
       fontSize: 18.0.sp,
       fontWeight: AppFontWeight.bold,
       color: AppColors.whiteColor,
     ),
-    subtitle2: TextStyle(
+    titleMedium: TextStyle(
       fontSize: 16.0.sp,
       fontWeight: AppFontWeight.bold,
       color: AppColors.whiteColor,
     ),
-    button: TextStyle(
+    displayMedium: TextStyle(
       fontSize: 16.sp,
       fontWeight: AppFontWeight.bold,
       color: AppColors.whiteColor,
     ),
-    bodyText1: TextStyle(
+    bodyLarge: TextStyle(
       fontSize: 14.sp,
       fontWeight: AppFontWeight.semiBold,
       color: AppColors.subDarkColor,
     ),
-    bodyText2: TextStyle(
+    bodyMedium: TextStyle(
       fontSize: 12.sp,
       fontWeight: AppFontWeight.semiBold,
       color: AppColors.subDarkColor,
     ),
-    caption: TextStyle(
+    labelMedium: TextStyle(
       fontSize: 10.sp,
       fontWeight: AppFontWeight.semiBold,
       color: AppColors.subDarkColor,

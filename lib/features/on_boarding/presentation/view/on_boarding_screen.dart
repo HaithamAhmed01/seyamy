@@ -18,7 +18,7 @@ class OnBoardingScreen extends StatelessWidget {
       ),
     );
     return const Scaffold(
-      backgroundColor: AppColors.backgroundColor,
+      backgroundColor: AppColors.whiteColor,
       body: OnBoardingBody(),
     );
   }

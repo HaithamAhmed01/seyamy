@@ -7,7 +7,7 @@ AppBar buildAppBar(String text, BuildContext context) {
   return AppBar(
     title: Text(
       text,
-      style: context.subtitle1(),
+      style: context.titleLarge(),
     ),
     leadingWidth: 100,
     leading: Padding(

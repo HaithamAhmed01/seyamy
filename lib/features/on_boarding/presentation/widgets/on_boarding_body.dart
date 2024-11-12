@@ -76,8 +76,9 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
                   color: AppColors.primaryColor,
                   onTap: () {
                     _controller.nextPage(
-                        duration: const Duration(milliseconds: 250),
-                        curve: Curves.easeInCirc);
+                      duration: const Duration(milliseconds: 1000),
+                      curve: Curves.fastOutSlowIn,
+                    );
                   },
                 )
               : CustomButton(

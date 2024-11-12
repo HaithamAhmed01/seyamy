@@ -8,6 +8,7 @@ import 'package:seyamy/core/utils/helper.dart';
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_string.dart';
+import '../../../../core/utils/app_values.dart';
 import '../manger/theme_cubit/theme_cubit.dart';
 import 'container_widget.dart';
 
@@ -47,21 +48,26 @@ class _DevWidgetState extends State<DevWidget> {
   Widget build(BuildContext context) {
     final themeCubit = BlocProvider.of<ThemeCubit>(context);
     return ContainerWidget(
-      body: Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.symmetric(
+              horizontal: AppPadding.p16,
+              vertical: AppPadding.p8,
+            ),
             child: Text(
               context.textTr(AppStrings.developer),
-              style: context.caption(),
+              style: context.titleMedium().copyWith(
+                color: AppColors.labelColor,
+              ),
             ),
           ),
           ListTile(
             leading: SvgPicture.asset(Assets.iconsFollow),
             title: Text(
               context.textTr(AppStrings.followDeveloper),
-              style: context.subtitle2(),
+              style: context.titleMedium(),
             ),
             trailing: Icon(
               Icons.arrow_forward_ios,
@@ -73,10 +79,25 @@ class _DevWidgetState extends State<DevWidget> {
             },
           ),
           ListTile(
+            leading: SvgPicture.asset(Assets.iconsDesigner),
+            title: Text(
+              context.textTr(AppStrings.followDesigner),
+              style: context.titleMedium(),
+            ),
+            trailing: Icon(
+              Icons.arrow_forward_ios,
+              color:
+                  themeCubit.them ? AppColors.labelColor : AppColors.whiteColor,
+            ),
+            onTap: () {
+              launchCustomUrl(context, AppStrings.linkDesigner);
+            },
+          ),
+          ListTile(
             leading: SvgPicture.asset(Assets.iconsMail),
             title: Text(
               context.textTr(AppStrings.contactAbout),
-              style: context.subtitle2(),
+              style: context.titleMedium(),
             ),
             trailing: Icon(
               Icons.arrow_forward_ios,
@@ -91,11 +112,11 @@ class _DevWidgetState extends State<DevWidget> {
             leading: SvgPicture.asset(Assets.iconsInfo),
             title: Text(
               context.textTr(AppStrings.version),
-              style: context.subtitle2(),
+              style: context.titleMedium(),
             ),
             trailing: Text(
               'V ${_packageInfo.version.isEmpty ? '0' : _packageInfo.version}',
-              style: context.subtitle2(),
+              style: context.titleMedium(),
             ),
           ),
         ],

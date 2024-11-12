@@ -59,14 +59,6 @@ class _CustomButtonState extends State<CustomButton> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(widget.borderRadius ?? 8),
                 color: widget.color ?? AppColors.bottomColor,
-                boxShadow: [
-                  BoxShadow(
-                    color: widget.color?.withOpacity(.5) ??
-                        AppColors.bottomColor.withOpacity(.5),
-                    offset: const Offset(0, 4),
-                    blurRadius: 20,
-                  )
-                ],
               ),
               width: _isPressed
                   ? widget.width2 ?? context.width * .5

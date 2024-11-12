@@ -31,9 +31,12 @@ class AppStrings {
   static const String shareApp = "Share the app";
   static const String developer = "Developer";
   static const String followDeveloper = "Follow Developer";
+  static const String followDesigner = "Follow Designer";
   static const String contactAbout = "Contact Us About the App";
   static const String remindMe = "Remind me of fasting on Mondays and Thursdays";
   static const String remindMeContent =  "Enable it if you want to receive notifications for fasting on Mondays and Thursdays every week";
+  static const String whiteDayRemind = "whiteDayRemind";
+  static const String whiteDayRemindContent  = "whiteDayRemindContent";
   static const String shareContent = "Share the App and Support Us";
   static const String version = "Version";
   static const String darkMode = "Dark Mode";
@@ -43,7 +46,7 @@ class AppStrings {
   static const String mightInterest = "Might Interest You";
   static const String howToUse = "How to Use";
   static const String rate = "Rate the App";
-  static const String shape = "Shape";
+  static const String theme = "Theme";
   static const String skip = "skip";
   static const String add = "Add";
   static const String username = "username_hint";
@@ -82,7 +85,7 @@ class AppStrings {
   static const String details = "details";
   static const String about = "about";
   static const String storeDetails = "store_details";
-  static const String changeLanguage = "change_language";
+  static const String changeLanguage = "changeLanguage";
   static const String contactUs = "contact_us";
   static const String inviteYourFriends = "invite_your_friends";
   static const String logout = "logout";
@@ -101,6 +104,8 @@ class AppStrings {
       'https://www.facebook.com/sharer/sharer.php?t=$text \n$appLink';
   static const String linkedInLink =
       'https://www.linkedin.com/in/haitham-ahmed-a4626a19b/';
+  static const String linkDesigner =
+      'https://www.behance.net/MostafaFawzi';
 
   // error handler
   static const String badRequestError = "bad_request_error";

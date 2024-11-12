@@ -21,7 +21,7 @@ class ErrorScreen extends StatelessWidget {
               children: [
                 Text('Error!',
                     style: context
-                        .subtitle1()
+                        .titleLarge()
                         .copyWith(fontSize: 30, color: Colors.black)),
                 16.height,
                 Padding(
@@ -30,7 +30,7 @@ class ErrorScreen extends StatelessWidget {
                   child: Text(
                     'Something went wrong, Please try again later',
                     style: context
-                        .bodyText1()
+                        .bodyLarge()
                         .copyWith(fontSize: 18, color: Colors.black54),
                     textAlign: TextAlign.center,
                   ),

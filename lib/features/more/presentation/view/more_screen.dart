@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../widgets/more_body.dart';
 
 class MoreScreen extends StatefulWidget {
-  const MoreScreen({Key? key}) : super(key: key);
+  const MoreScreen({super.key});
 
   @override
   State<MoreScreen> createState() => _MoreScreenState();

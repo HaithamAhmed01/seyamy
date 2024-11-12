@@ -5,6 +5,8 @@ import 'package:seyamy/core/utils/app_string.dart';
 import 'package:seyamy/core/utils/helper.dart';
 import 'package:seyamy/features/more/presentation/widgets/container_widget.dart';
 
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_values.dart';
 import '../manger/theme_cubit/theme_cubit.dart';
 import '../manger/theme_cubit/theme_state.dart';
 
@@ -19,20 +21,25 @@ class ThemWidget extends StatelessWidget {
       builder: (context, state) {
         final themeCubit = BlocProvider.of<ThemeCubit>(context);
         return ContainerWidget(
-          body: Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppPadding.p16,
+                  vertical: AppPadding.p8,
+                ),
                 child: Text(
-                  context.textTr(AppStrings.shape),
-                  style: context.caption(),
+                  context.textTr(AppStrings.theme),
+                  style: context.titleMedium().copyWith(
+                    color: AppColors.labelColor,
+                  ),
                 ),
               ),
               ListTile(
                 title: Text(
                   context.textTr(AppStrings.darkMode),
-                  style: context.subtitle2(),
+                  style: context.titleMedium(),
                 ),
                 trailing: Switch(
                   value: themeCubit.state == AppTheme.dark,
@@ -49,11 +56,11 @@ class ThemWidget extends StatelessWidget {
                 title: Text(
                   context.textTr(AppStrings.automatic),
                   style:
-                      context.subtitle2().copyWith(fontSize: 15.sp, height: 2),
+                      context.titleMedium().copyWith(fontSize: 15.sp, height: 2),
                 ),
                 subtitle: Text(
                   context.textTr(AppStrings.automaticContent),
-                  style: context.caption().copyWith(height: 1.81),
+                  style: context.labelMedium().copyWith(height: 1.81),
                 ),
                 trailing: Switch(
                   value: themeCubit.state == AppTheme.system,

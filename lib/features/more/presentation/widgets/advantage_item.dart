@@ -18,7 +18,7 @@ class AdvantageItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ContainerWidget(
-      body: Padding(
+      child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,14 +29,14 @@ class AdvantageItem extends StatelessWidget {
                 8.width,
                 Text(
                   header,
-                  style: context.subtitle2(),
+                  style: context.titleMedium(),
                 ),
               ],
             ),
             8.height,
             Text(
               body,
-              style: context.bodyText2(),
+              style: context.bodyMedium(),
             )
           ],
         ),

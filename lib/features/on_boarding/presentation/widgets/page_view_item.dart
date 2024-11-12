@@ -11,10 +11,10 @@ class PageViewItem extends StatelessWidget {
   final int index;
 
   const PageViewItem({
-    Key? key,
+    super.key,
     required this.onBoarding,
     required this.index,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class PageViewItem extends StatelessWidget {
               children: [
                 Text(
                   onBoarding[index].title,
-                  style: context.subtitle1().copyWith(
+                  style: context.titleLarge().copyWith(
                         fontSize: 20.sp,
                         // color: AppColors.bottomColor,
                       ),
@@ -49,7 +49,7 @@ class PageViewItem extends StatelessWidget {
                 ),
                 Text(
                   onBoarding[index].text,
-                  style: context.bodyText1().copyWith(
+                  style: context.bodyLarge().copyWith(
                         // color: AppColors.subLightColor,
                         fontWeight: AppFontWeight.medium,
                       ),

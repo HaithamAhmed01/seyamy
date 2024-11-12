@@ -1,17 +1,10 @@
+// ignore_for_file: prefer_single_quotes
 class Assets {
   Assets._();
   
   /// Assets for animationFADL
   /// assets/animation/FADL.json
   static const String animationFADL = "assets/animation/FADL.json";
-
-  /// Assets for animationGHAMZADark
-  /// assets/animation/GHAMZA_Dark.riv
-  static const String animationGHAMZADark = "assets/animation/GHAMZA_Dark.riv";
-
-  /// Assets for animationGHAMZALIGHT
-  /// assets/animation/GHAMZA_LIGHT.riv
-  static const String animationGHAMZALIGHT = "assets/animation/GHAMZA_LIGHT.riv";
 
   /// Assets for animationMeshGHAMZADark
   /// assets/animation/Mesh_GHAMZA_Dark.riv
@@ -65,6 +58,10 @@ class Assets {
   /// assets/fonts/Cairo-VariableFont.ttf
   static const String fontsCairoVariableFont = "assets/fonts/Cairo-VariableFont.ttf";
 
+  /// Assets for iconsARFlag
+  /// assets/icons/AR-flag.svg
+  static const String iconsARFlag = "assets/icons/AR-flag.svg";
+
   /// Assets for iconsAdd
   /// assets/icons/add.svg
   static const String iconsAdd = "assets/icons/add.svg";
@@ -72,6 +69,10 @@ class Assets {
   /// Assets for iconsArrow
   /// assets/icons/Arrow.svg
   static const String iconsArrow = "assets/icons/Arrow.svg";
+
+  /// Assets for iconsCheckCircle
+  /// assets/icons/Check-Circle.svg
+  static const String iconsCheckCircle = "assets/icons/Check-Circle.svg";
 
   /// Assets for iconsCopy
   /// assets/icons/copy.svg
@@ -81,9 +82,17 @@ class Assets {
   /// assets/icons/Crown.svg
   static const String iconsCrown = "assets/icons/Crown.svg";
 
+  /// Assets for iconsDesigner
+  /// assets/icons/Designer.svg
+  static const String iconsDesigner = "assets/icons/Designer.svg";
+
   /// Assets for iconsDown
   /// assets/icons/down.svg
   static const String iconsDown = "assets/icons/down.svg";
+
+  /// Assets for iconsENFlag
+  /// assets/icons/EN-flag.svg
+  static const String iconsENFlag = "assets/icons/EN-flag.svg";
 
   /// Assets for iconsEdit
   /// assets/icons/edit.svg
@@ -136,6 +145,10 @@ class Assets {
   /// Assets for iconsMore
   /// assets/icons/more.svg
   static const String iconsMore = "assets/icons/more.svg";
+
+  /// Assets for iconsRadioButtons
+  /// assets/icons/radio_buttons.svg
+  static const String iconsRadioButtons = "assets/icons/radio_buttons.svg";
 
   /// Assets for iconsRate
   /// assets/icons/rate.svg
@@ -221,3 +234,4 @@ class Assets {
   /// assets/lang/en.json
   static const String langEn = "assets/lang/en.json";
 }
+

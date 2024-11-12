@@ -19,14 +19,14 @@ class AdvantagesWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final themeCubit = BlocProvider.of<ThemeCubit>(context);
     return ContainerWidget(
-      body: Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ListTile(
             leading: Image.asset(Assets.iconsIcLauncher),
             title: Text(
               context.textTr(AppStrings.applicationAdvantages),
-              style: context.subtitle2(),
+              style: context.titleMedium(),
             ),
             trailing: Icon(
               Icons.arrow_forward_ios,

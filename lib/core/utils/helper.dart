@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:seyamy/core/utils/constants.dart';
 
 import '../../config/locale/app_localizations.dart';
+import 'constants.dart';
 
 /// Extension for easy access to MediaQuery related properties
 extension MediaQueryHelper on BuildContext {
@@ -25,34 +25,38 @@ extension MediaQueryHelper on BuildContext {
 }
 
 extension TextHelper on BuildContext {
-  TextStyle subtitle1() {
-    return Theme.of(this).textTheme.subtitle1!;
+  TextStyle titleLarge() {
+    return Theme.of(this).textTheme.titleLarge!;
   }
 
-  TextStyle subtitle2() {
-    return Theme.of(this).textTheme.subtitle2!;
+  TextStyle titleMedium() {
+    return Theme.of(this).textTheme.titleMedium!;
   }
 
-  TextStyle bodyText1() {
-    return Theme.of(this).textTheme.bodyText1!;
+  TextStyle bodyLarge() {
+    return Theme.of(this).textTheme.bodyLarge!;
   }
 
-  TextStyle bodyText2() {
-    return Theme.of(this).textTheme.bodyText2!;
+  TextStyle bodyMedium() {
+    return Theme.of(this).textTheme.bodyMedium!;
   }
 
-  TextStyle caption() {
-    return Theme.of(this).textTheme.caption!;
+  TextStyle labelMedium() {
+    return Theme.of(this).textTheme.labelMedium!;
   }
 
   TextStyle button() {
-    return Theme.of(this).textTheme.button!;
+    return Theme.of(this).textTheme.displayMedium!;
   }
 }
 
 extension TranslateHelper on BuildContext {
   String textTr(String text) {
     return AppLocalizations.of(this)!.translate(text)!;
+  }
+
+  String? textTrCheck(String text) {
+    return AppLocalizations.of(this)!.translate(text);
   }
 }
 
@@ -324,14 +328,14 @@ extension WidgetExtension on Widget? {
   /// set widget visibility
   @Deprecated('')
   Visibility withVisibility(
-    bool visible, {
-    Widget? replacement,
-    bool maintainAnimation = false,
-    bool maintainState = false,
-    bool maintainSize = false,
-    bool maintainSemantics = false,
-    bool maintainInteractivity = false,
-  }) {
+      bool visible, {
+        Widget? replacement,
+        bool maintainAnimation = false,
+        bool maintainState = false,
+        bool maintainSize = false,
+        bool maintainSemantics = false,
+        bool maintainInteractivity = false,
+      }) {
     return Visibility(
       visible: visible,
       maintainAnimation: maintainAnimation,
@@ -439,4 +443,10 @@ extension WidgetExtension on Widget? {
   Widget withTooltip({required String msg}) {
     return Tooltip(message: msg, child: this);
   }
+}
+
+// Boolean Extensions
+extension BooleanExtensions on bool? {
+  /// Validate given bool is not null and returns given value if null.
+  bool validate({bool value = false}) => this ?? value;
 }
